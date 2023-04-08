@@ -7,17 +7,17 @@
 *   Vue.js Template
 
 ### Program:
-
-    $ProjectFileDir$/node_modules/.bin/vue-cli-service
-
+```
+$ProjectFileDir$/node_modules/.bin/vue-cli-service
+```
 ### Arguments:
-
-    lint $FilePath$
-
+```
+lint $FilePath$
+```
 ### Working directory:
-
-    $ProjectFileDir$
-
+```
+$ProjectFileDir$
+```
 ### Advanced Options:
 
 *   No: Auto-save
@@ -25,9 +25,3 @@
 *   No: Trigger ... errors
 *   No: Create output file
 *   Show Console: On error
-
-[« Graylog Memory/Heap usage](graylog-memory-heap-usage.html)
-
-[MATE Desktop Environment »](mate-desktop-environment.html)
-
-

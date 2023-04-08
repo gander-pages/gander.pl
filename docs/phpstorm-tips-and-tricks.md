@@ -85,11 +85,3 @@ _.git-ftp-include_
 *   .ignore
 *   BashSupport
 *   String Manipulation
-
-
-
-[« JavaScript fixtures](javascript-fixtures.html)
-
-[Favourite code »](favourite-code.html)
-
-

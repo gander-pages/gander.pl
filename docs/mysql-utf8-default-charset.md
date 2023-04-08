@@ -1,14 +1,10 @@
 # MySQL utf8 Default Charset
 
-_my.cnf_
+`my.cnf`
 
-    [mysqld]
-    # Version 5.5.3 introduced "utf8mb4", which is recommended
-    collation-server     = utf8mb4_general_ci # Replaces utf8_general_ci
-    character-set-server = utf8mb4            # Replaces utf8
-
-
-
-[InPost tracking number to link converter »](inpost-tracking-number-to-link-converter.html)
-
-
+```ini
+[mysqld]
+# Version 5.5.3 introduced "utf8mb4", which is recommended
+collation-server     = utf8mb4_general_ci # Replaces utf8_general_ci
+character-set-server = utf8mb4            # Replaces utf8
+```

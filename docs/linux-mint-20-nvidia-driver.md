@@ -14,48 +14,35 @@ Config:
 
 Steps:
 ------
-
-    sudo apt-get purge *nvidia*
-    sudo apt-get autoremove
-    reboot
-
+```bash
+sudo apt-get purge *nvidia*
+sudo apt-get autoremove
+reboot
+```
 Download nvidia driver
-
-    echo 'blacklist nouveau' | sudo tee /etc/modprobe.d/disable-nouveau.conf
-    sudo update-initramfs -u
-    reboot
-
-_CTRL + ALT + F1_
-
-    sudo service lightdm stop
-
+```bash
+echo 'blacklist nouveau' | sudo tee /etc/modprobe.d/disable-nouveau.conf
+sudo update-initramfs -u
+reboot
+```
+`_CTRL + ALT + F1_` to switch to text mode
+```bash
+sudo service lightdm stop
+```
 Run nvidia installer
 
-question
 
-answer
+| question         | answer   |
+|------------------|----------|
+| alternate method | continue |
+| DKMS             | yes      |
+| 32bit            | yes      |
+| ?                | yes      |
+| nvidia-xconfig   | no       |
 
-alternate method
-
-continue
-
-DKMS
-
-yes
-
-32bit
-
-yes
-
-?
-
-yes
-
-nvidia-xconfig
-
-no
-
-    sudo service lightdm start
+```bash
+sudo service lightdm start
+```
 
 *   Run _NVIDIA X Server Settings_ (`nvidia-settings`)
 *   Go to _X Server Display Configuration_
@@ -65,15 +52,7 @@ Sources:
 --------
 
 *   » [Mint 20 Nvidia Driver Installation Update](https://forums.linuxmint.com/viewtopic.php?t=154932&start=39) «
-
 *   [Release Notes for Linux Mint 20 Cinnamon](https://www.linuxmint.com/rel_ulyana_cinnamon.php)
 *   [Unix Driver Archive](https://www.nvidia.com/en-us/drivers/unix/)
-
 *   [ACPI errors and graphics card drivers issues](https://forums.linuxmint.com/viewtopic.php?t=328023)
 *   [NVIDIA X server settings is displaying empty window](https://superuser.com/questions/1394120/nvidia-x-server-settings-is-displaying-empty-window)
-
-[« Awesome Node.js Scripts](awesome-node-scripts.html)
-
-[PhpStorm Inotify Watches Limit »](phpstorm-inotify-watches-limit.html)
-
-

@@ -1,24 +1,28 @@
 # Ansible cheatsheet
 
-### Install
+## Install
 
-    apt install python-dev python3-dev
-    pip install --user wheel ansible
-    # install RC, eg:
-    pip install --user wheel ansible==v2.9.0rc1
+```bash
+apt install python-dev python3-dev
+pip install --user wheel ansible
+# install RC, eg:
+pip install --user wheel ansible==v2.9.0rc1
+```
 
-### The **_inventory_** skeleton
+## The **_inventory_** skeleton
 
-    all:
-      hosts:
-        my-host:
-          ansible_connection: ssh
-          ansible_ssh_host: 192.168.0.100
-          ansible_ssh_port: 22
-          ansible_ssh_user: foo
-          ansible_ssh_pass: bar
+```yaml
+all:
+  hosts:
+    my-host:
+      ansible_connection: ssh
+      ansible_ssh_host: 192.168.0.100
+      ansible_ssh_port: 22
+      ansible_ssh_user: foo
+      ansible_ssh_pass: bar
+```
 
-### How to load **_dconf_** for **_root_** user?
+## How to load **_dconf_** for **_root_** user?
 
 Some research done:
 
@@ -28,23 +32,19 @@ Some research done:
 
 **My _(working)_ solution:**
 
-    ---
-    - name: Load dconf settings
-      command: dconf load /
-      args:
-        stdin: "{{ dconf_contents }}"
+```yaml
+---
+- name: Load dconf settings
+  command: dconf load /
+  args:
+    stdin: "{{ dconf_contents }}"
 
-    - name: Load dconf settings for root
-      command: dbus-launch dconf load /
-      args:
-        stdin: "{{ dconf_contents }}"
-      become: true
-      become_flags: -H
+- name: Load dconf settings for root
+  command: dbus-launch dconf load /
+  args:
+    stdin: "{{ dconf_contents }}"
+  become: true
+  become_flags: -H
+```
 
 Settings are loaded from file.
-
-[« Vue.js tips and tricks](vue-js-tips-and-tricks.html)
-
-[CheckSum »](checksum.html)
-
-

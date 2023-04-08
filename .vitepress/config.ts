@@ -39,7 +39,7 @@ export default defineConfig({
           { text: 'Vue.js tips and tricks', link: '/vue-js-tips-and-tricks' },
           { text: '~/.ssh/config', link: '/ssh-config' },
           { text: 'PhpStorm Plugins', link: '/phpstorm-plugins' },
-          { text: 'Windows: Swich Display Output using command line and hot keys', link: '/windows-swich-display-output-using-command-line-and-hot-keys' },
+          { text: 'Windows: Switch Display Output using command line and hot keys', link: '/windows-swich-display-output-using-command-line-and-hot-keys' },
           { text: 'Linux reboot to EFI', link: '/linux-reboot-to-efi' },
           { text: 'Setup Linux Mint for PHP Dev', link: '/setup-linux-mint-for-php-dev' },
           { text: 'Start Symfony Project', link: '/start-symfony-project' },

@@ -10,11 +10,3 @@ Solution:
 *   reboot your system
 
 Related: [https://askubuntu.com/a/1034952](https://askubuntu.com/a/1034952)
-
-
-
-[« Niuanse Symfony](niuanse-symfony.html)
-
-[Hardware Tools »](hardware-tools.html)
-
-

@@ -12,8 +12,5 @@
 *   [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
 *   [Symfony Plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin)
 
-[« Windows: Swich Display Output using command line and hot keys](windows-swich-display-output-using-command-line-and-hot-keys.html)
-
-[~/.ssh/config »](ssh-config.html)
 
 

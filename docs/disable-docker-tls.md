@@ -4,13 +4,7 @@
 
 In _.bashrc_ add:
 
-    unset DOCKER_TLS_VERIFY
-    unset DOCKER_CERT_PATH
-
-
-
-[« Docker](docker.html)
-
-[PHP Tricks and Tips »](php-tricks-and-tips.html)
-
-
+```bash
+unset DOCKER_TLS_VERIFY
+unset DOCKER_CERT_PATH
+```

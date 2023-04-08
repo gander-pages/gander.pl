@@ -1,61 +1,71 @@
 # How to connect to VPN with CLI password prompting
 
-### Version 3:
+## Version 3:
 
 Now, I can set it as startup script.
+```bash
+alias vpn='~/vpn/runvpn-start.sh'
+```
+`runvpn-start.sh`:
 
-    alias vpn='~/vpn/runvpn-start.sh'
+```bash
+#!/usr/bin/env bash
 
-_runvpn-start.sh_:
+cd $(dirname "${0}")
+nmcli con down id my-vpn
+screen -S vpn -X kill
+screen -S vpn -d -m ./runvpn-except.sh
+nmcli con up id my-vpn
+cd -
+```
 
-    #!/usr/bin/env bash
+`runvpn-except.sh`:
 
-    cd $(dirname "${0}")
-    nmcli con down id my-vpn
-    screen -S vpn -X kill
-    screen -S vpn -d -m ./runvpn-except.sh
-    nmcli con up id my-vpn
-    cd -
+```bash
+#!/usr/bin/env expect
 
-_runvpn-except.sh_:
+set pass MySecredPassword
 
-    #!/usr/bin/env expect
+spawn ./runvpn
 
-    set pass MySecredPassword
+expect Pass:
+send "$pass\r"
 
-    spawn ./runvpn
+interact
 
-    expect Pass:
-    send "$pass\r"
+expect eof
+```
 
-    interact
+## Version 2:
 
-    expect eof
+```bash
+alias vpn='cd ~/vpn && screen -m -d -S vpn ./runvpn-except.sh && nmcli con up id my-vpn'
+```
 
-### Version 2:
+`runvpn-except.sh`:
 
-    alias vpn='cd ~/vpn && screen -m -d -S vpn ./runvpn-except.sh && nmcli con up id my-vpn'
+```bash
+#!/usr/bin/env expect
 
-_runvpn-except.sh_:
+set pass MySecredPassword
 
-    #!/usr/bin/env expect
+spawn ./runvpn
 
-    set pass MySecredPassword
+expect Pass:
+send "$pass\r"
 
-    spawn ./runvpn
+interact
 
-    expect Pass:
-    send "$pass\r"
+expect eof
+```
 
-    interact
-
-    expect eof
-
-### Version 1:
+## Version 1:
 
 Paste password from clipboard when user input; Press `CTRL+A` and `D` to detach and continue
 
-    alias vpn='cd ~/vpn && xclip -selection c ./pass && screen -S vpn ./runvpn && nmcli con up id my-vpn; xclip -selection c /dev/null'
+```bash
+alias vpn='cd ~/vpn && xclip -selection c ./pass && screen -S vpn ./runvpn && nmcli con up id my-vpn; xclip -selection c /dev/null'
+```
 
 #### Manuals:
 
@@ -63,11 +73,3 @@ Paste password from clipboard when user input; Press `CTRL+A` and `D` to detach 
 *   [https://linux.die.net/man/1/nmcli](https://linux.die.net/man/1/nmcli)
 *   [https://linux.die.net/man/1/xclip](https://linux.die.net/man/1/xclip)
 *   [https://linux.die.net/man/1/screen](https://linux.die.net/man/1/screen)
-
-
-
-[« DevTools](devtools.html)
-
-[Awesome Node.js Scripts »](awesome-node-scripts.html)
-
-

@@ -1,166 +1,166 @@
 # Vue.js tips and tricks
 
-### **Vue CLI**
+## **Vue CLI**
 
-    npm install -g @vue/cli @vue/cli-service-global
+```bash
+npm install -g @vue/cli @vue/cli-service-global
 
-    vue ui
-    vue create my-exaple-project
+vue ui
+vue create my-exaple-project
 
-    vue add eslint
-    # eslint => @vue/eslint => @vue/cli-plugin-eslint
-    vue add cli-plugin-eslint
+vue add eslint
+# eslint => @vue/eslint => @vue/cli-plugin-eslint
+vue add cli-plugin-eslint
 
-    # installs and invokes vue-cli-plugin-apollo
-    vue add apollo
+# installs and invokes vue-cli-plugin-apollo
+vue add apollo
+```
 
-Plugin
-
-Link
-
-`browser-extension`
-
-[https://npm.im/vue-cli-plugin-browser-extension](https://npm.im/vue-cli-plugin-browser-extension)
-
-Vue Composition API
-
-[https://npm.im/@vue/composition-api](https://npm.im/@vue/composition-api)
++ `browser-extension` [https://npm.im/vue-cli-plugin-browser-extension](https://npm.im/vue-cli-plugin-browser-extension)
++ Vue Composition API [https://npm.im/@vue/composition-api](https://npm.im/@vue/composition-api)
 
 *   [How to Make a Chrome Extension with Vue.js](https://medium.com/javascript-in-plain-english/how-to-make-a-chrome-extension-with-vue-js-56e50bd97972)
 
-### **Bootstrap** table style not working?
+## **Bootstrap** table style not working?
 
 Use `<thead>` and `<tbody>`.
 
-### **v-model** in Components (+ Composition API)
+## **v-model** in Components (+ Composition API)
 
-**In browser**
+### In browser
 
-    Vue.use(vueCompositionApi.default);
-    const {computed} = vueCompositionApi
+```js
+Vue.use(vueCompositionApi.default);
+const {computed} = vueCompositionApi
+```
 
-#### HTML:
+### HTML:
+```html
+<div id="app">
+  <foo v-model="fooVal"></foo>
+    <foo :value="fooVal" @input="fooVal = $event"></foo>
 
-    <div id="app">
-      <foo v-model="fooVal"></foo>
-        <foo :value="fooVal" @input="fooVal = $event"></foo>
+  <bar v-model="barVal"></bar>
+    <bar :lorem="barVal" @ipsum="barVal = $event"></bar>
 
-      <bar v-model="barVal"></bar>
-        <bar :lorem="barVal" @ipsum="barVal = $event"></bar>
+  <lol :x="fooVal" :y="barVal" v-model="lolVal"></lol>
+    <lol :x="fooVal" :y="barVal" :z="lolVal" @input="lolVal = $event"></lol>
+</div>
+```
 
-      <lol :x="fooVal" :y="barVal" v-model="lolVal"></lol>
-        <lol :x="fooVal" :y="barVal" :z="lolVal" @input="lolVal = $event"></lol>
-    </div>
+## **Vue.js 2** ([_test_](https://codepen.io/gander/pen/eYYVgKJ))
 
-#### **Vue.js 2** ([_test_](https://codepen.io/gander/pen/eYYVgKJ))
+```js
+Vue.component("foo", {
+  template: `<button @click="increment">{{ value }}</button>`,
+  props: {
+    value: Number
+  },
+  methods: {
+    increment() {
+      this.$emit("input", this.value + 1);
+    }
+  }
+});
 
-    Vue.component("foo", {
-      template: `<button @click="increment">{{ value }}</button>`,
-      props: {
-        value: Number
-      },
-      methods: {
-        increment() {
-          this.$emit("input", this.value + 1);
-        }
-      }
-    });
+Vue.component("bar", {
+  template: `<button @click="increment">{{ lorem }}</button>`,
+  props: {
+    lorem: Number
+  },
+  model: {
+    prop: "lorem",
+    event: "ipsum"
+  },
+  methods: {
+    increment() {
+      this.$emit("ipsum", this.lorem * 2);
+    }
+  }
+});
 
-    Vue.component("bar", {
-      template: `<button @click="increment">{{ lorem }}</button>`,
-      props: {
-        lorem: Number
-      },
-      model: {
-        prop: "lorem",
-        event: "ipsum"
-      },
-      methods: {
-        increment() {
-          this.$emit("ipsum", this.lorem * 2);
-        }
-      }
-    });
+Vue.component("lol", {
+  template: `<button @click="sum">{{ z }}</button>`,
+  props: {
+    x: Number,
+    y: Number,
+    z: Number
+  },
+  model: {
+    prop: "z"
+  },
+  methods: {
+    sum() {
+      this.$emit("input", this.x + this.y);
+    }
+  }
+});
 
-    Vue.component("lol", {
-      template: `<button @click="sum">{{ z }}</button>`,
-      props: {
-        x: Number,
-        y: Number,
-        z: Number
-      },
-      model: {
-        prop: "z"
-      },
-      methods: {
-        sum() {
-          this.$emit("input", this.x + this.y);
-        }
-      }
-    });
+new Vue({
+  el: "#app",
+  data: {
+    fooVal: 1,
+    barVal: 1,
+    lolVal: 0
+  }
+});
+```
 
-    new Vue({
-      el: "#app",
-      data: {
-        fooVal: 1,
-        barVal: 1,
-        lolVal: 0
-      }
-    });
+## **Vue.js 3 / Composition API** ([_test_](https://codepen.io/gander/pen/oNNEPBy))
 
-#### **Vue.js 3 / Composition API** ([_test_](https://codepen.io/gander/pen/oNNEPBy))
+```js
+// vueCompositionApi => Vue.js 2.x plugin
 
-    // vueCompositionApi => Vue.js 2.x plugin
+Vue.use(vueCompositionApi.default);
 
-    Vue.use(vueCompositionApi.default);
+Vue.component("foo", {
+  template: `<button @click="increment">{{ value }}</button>`,
+  props: {
+    value: Number
+  },
+  setup: (props, context) => ({
+    increment: () => context.emit("input", props.value + 1)
+  })
+});
 
-    Vue.component("foo", {
-      template: `<button @click="increment">{{ value }}</button>`,
-      props: {
-        value: Number
-      },
-      setup: (props, context) => ({
-        increment: () => context.emit("input", props.value + 1)
-      })
-    });
+Vue.component("bar", {
+  template: `<button @click="increment">{{ lorem }}</button>`,
+  props: {
+    lorem: Number
+  },
+  model: {
+    prop: "lorem",
+    event: "ipsum"
+  },
+  setup: (props, context) => ({
+    increment: () => context.emit("ipsum", props.lorem * 2)
+  })
+});
 
-    Vue.component("bar", {
-      template: `<button @click="increment">{{ lorem }}</button>`,
-      props: {
-        lorem: Number
-      },
-      model: {
-        prop: "lorem",
-        event: "ipsum"
-      },
-      setup: (props, context) => ({
-        increment: () => context.emit("ipsum", props.lorem * 2)
-      })
-    });
+Vue.component("lol", {
+  template: `<button @click="sum">{{ z }}</button>`,
+  props: {
+    x: Number,
+    y: Number,
+    z: Number
+  },
+  model: {
+    prop: "z"
+  },
+  setup: (props, context) => ({
+    sum: () => context.emit("input", props.x + props.y)
+  })
+});
 
-    Vue.component("lol", {
-      template: `<button @click="sum">{{ z }}</button>`,
-      props: {
-        x: Number,
-        y: Number,
-        z: Number
-      },
-      model: {
-        prop: "z"
-      },
-      setup: (props, context) => ({
-        sum: () => context.emit("input", props.x + props.y)
-      })
-    });
-
-    new Vue({
-      el: "#app",
-      data: {
-        fooVal: 1,
-        barVal: 1,
-        lolVal: 0
-      }
-    });
+new Vue({
+  el: "#app",
+  data: {
+    fooVal: 1,
+    barVal: 1,
+    lolVal: 0
+  }
+});
+```
 
 Sources:
 
@@ -172,107 +172,119 @@ Sources:
     *   [https://vuejs.org/v2/api/#v-bind](https://vuejs.org/v2/api/#v-bind)
     *   [https://vuejs.org/v2/api/#v-on](https://vuejs.org/v2/api/#v-on)
 
-### Init with data from **dataset**
+## Init with data from **dataset**
 
-    export default {
-        data() {
-            return {
-                id: this['$root']['$el']['dataset']['id'],
-            };
-        },
-    };
-
-**Version 2**:
-
-_index.html_:
-
-        <div id="app" data-id="123"></div>
-
-_index.js_:
-
-        (function (el) {
-
-            new Vue({
-                el,
-                render: h => h(Module),
-                data: () => Object.assign({}, el.dataset) ,
-            });
-
-        })(document.getElementById('app'));
-
-_Module.vue_:
-
-        export default {
-            name: 'Module',
-            data() {
-                return {
-                    id: this.$parent.id,
-                };
-            },
+```js
+export default {
+    data() {
+        return {
+            id: this['$root']['$el']['dataset']['id'],
         };
+    },
+};
+```
 
-**Version 3**:
+### Version 2:
 
-        (function (el) {
+`index.html`:
 
-            new Vue({
-                el: el,
-                render: h => h(Module),
-                propsData: {
-                    ...el.dataset
-                }
-            });
+```html
+<div id="app" data-id="123"></div>
+```
 
-        })(document.getElementById('app'));
+`index.js`:
 
-**Version 4**:
+```js
+(function (el) {
 
-    (function (el) {
-        new Vue({el, render: h => h(Module, {props: {...el.dataset}})});
-    })(document.getElementById('app'));
+    new Vue({
+        el,
+        render: h => h(Module),
+        data: () => Object.assign({}, el.dataset) ,
+    });
 
-    // Module.vue
-    export default {
-      props: {
-        id: {
-          type: String,
-          required: true,
-          validator: v => /^\d+$/.test(v),
-        },
+})(document.getElementById('app'));
+```
+
+`Module.vue`:
+
+```js
+export default {
+    name: 'Module',
+    data() {
+        return {
+            id: this.$parent.id,
+        };
+    },
+};
+```
+
+### Version 3:
+
+```js
+(function (el) {
+
+    new Vue({
+        el: el,
+        render: h => h(Module),
+        propsData: {
+            ...el.dataset
+        }
+    });
+
+})(document.getElementById('app'));
+```
+
+### Version 4:
+
+```js
+(function (el) {
+    new Vue({el, render: h => h(Module, {props: {...el.dataset}})});
+})(document.getElementById('app'));
+
+// Module.vue
+export default {
+  props: {
+    id: {
+      type: String,
+      required: true,
+      validator: v => /^\d+$/.test(v),
+    },
+  },
+};
+```
+
+### Version 5 (Vue 3.x) \[[example](https://jsfiddle.net/gander/ar2vdb6u)\]:
+
+```html
+<div id="foo">EXAMPLE #1</div>
+<div id="bar" data-firstname="Evan" data-lastname="You">EXAMPLE #2</div>
+```
+```js
+function initApp(root) {
+  Vue.createApp({
+    props: {
+      firstname: {
+        type: String,
+        default: 'John'
       },
-    };
+      lastname: {
+        type: String,
+        default: 'Doe'
+      }
+    },
+    template: '{{ firstname }} {{ lastname }}'
+  }, root.dataset).mount(root);
+}
 
-**Version 5** (Vue 3.x) \[[example](https://jsfiddle.net/gander/ar2vdb6u)\]:
-
-    <div id="foo">EXAMPLE #1</div>
-    <div id="bar" data-firstname="Evan" data-lastname="You">EXAMPLE #2</div>
-
-    function initApp(root) {
-      Vue.createApp({
-        props: {
-          firstname: {
-            type: String,
-            default: 'John'
-          },
-          lastname: {
-            type: String,
-            default: 'Doe'
-          }
-        },
-        template: '{{ firstname }} {{ lastname }}'
-      }, root.dataset).mount(root);
-    }
-
-    initApp(document.getElementById('foo'));
-    initApp(document.getElementById('bar'));
+initApp(document.getElementById('foo'));
+initApp(document.getElementById('bar'));
+```
 
 Result:
-
-    <div id="foo">John Doe</div>
-    <div id="bar" data-firstname="Evan" data-lastname="You">Evan You</div>
-
-[« ~/.ssh/config](ssh-config.html)
-
-[Ansible cheatsheet »](ansible-cheatsheet.html)
+```html
+<div id="foo">John Doe</div>
+<div id="bar" data-firstname="Evan" data-lastname="You">Evan You</div>
+```
 
 

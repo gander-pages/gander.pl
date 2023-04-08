@@ -6,11 +6,3 @@
 4.  Click `Apply`
 5.  Type your password, and confirm password
 6.  Click `OK`
-
-
-
-[« Bootstrap Grid forcing width](bootstrap-grid-forcing-width.html)
-
-[Debian CheatSheet »](debian-cheatsheet.html)
-
-

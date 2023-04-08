@@ -1,28 +1,26 @@
 # yargs
 
-    npm install yargs @types/yargs
+```bash
+npm install yargs @types/yargs
+```
 
-    const yargs = require('yargs/yargs');
+```js
+const yargs = require('yargs/yargs');
 
-    // or:
+// or:
 
-    import yargs from 'yargs/yargs';
+import yargs from 'yargs/yargs';
 
-    const argv = yargs(process.argv.slice(2)).option('o', {
-        alias: 'option', type: 'boolean', default: false
-    }).argv;
+const argv = yargs(process.argv.slice(2)).option('o', {
+    alias: 'option', type: 'boolean', default: false
+}).argv;
 
-    // or:
+// or:
 
-    const argv = yargs(process.argv.slice(2)).options({
-        o: {alias: 'option', type: 'boolean', default: false}
-    }).argv;
-
+const argv = yargs(process.argv.slice(2)).options({
+    o: {alias: 'option', type: 'boolean', default: false}
+}).argv;
+```
 
 [yargs docs](https://github.com/yargs/yargs/tree/master/docs)
-
-[« How to resolve SAOError when using create-nuxt-app](how-to-resolve-saoerror-when-using-create-nuxt-app.html)
-
-[Signal Desktop Tray Icon »](signal-desktop-tray-icon.html)
-
 

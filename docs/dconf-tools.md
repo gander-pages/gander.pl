@@ -8,9 +8,3 @@ Autorun devices:
 
 *   `automount` » try auto mount devices after plug in
 *   `automount-open` » open mounted devices
-
-[« Doctrine DebugStack with Symfony Console Table](doctrine-debugstack-with-symfony-console-table.html)
-
-[Google Chrome Extensions »](google-chrome-extensions.html)
-
-
