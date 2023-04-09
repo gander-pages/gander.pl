@@ -3,6 +3,7 @@ import { SearchPlugin } from "vitepress-plugin-search"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lastUpdated: true,
   title: "Gander Site",
   description: "Code solutions, tips and tricks.",
   srcDir: 'docs',
@@ -97,6 +98,12 @@ export default defineConfig({
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/adam-gasowski/',
       },
-    ]
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/gander/gander.pl/edit/master/docs/:path'
+    },
+
+
   }
 })
