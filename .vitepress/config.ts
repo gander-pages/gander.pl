@@ -8,6 +8,18 @@ export default defineConfig({
   description: "Code solutions, tips and tricks.",
   srcDir: 'docs',
   cleanUrls: true,
+  head: [
+    [
+      'script',
+      {
+        'async': 'true',
+        'defer': 'true',
+        'data-website-id': 'ba6e3a22-e496-4096-bd0a-23d48dfce33a',
+        'data-domains': 'gander.pl',
+        'src': 'https://mws02-40122.wykr.es/umami.js',
+      },
+    ],
+  ],
   vite: {
     plugins: [
         SearchPlugin(),
