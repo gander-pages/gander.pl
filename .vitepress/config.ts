@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { SearchPlugin } from "vitepress-plugin-search"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -6,6 +7,11 @@ export default defineConfig({
   description: "Code solutions, tips and tricks.",
   srcDir: 'docs',
   cleanUrls: true,
+  vite: {
+    plugins: [
+        SearchPlugin(),
+    ],
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
