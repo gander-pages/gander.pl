@@ -4,7 +4,7 @@ tags: [jsfiddle]
 ---
 # {{ $frontmatter.title }}
 
-Google Chrome Extension: [Custom JavaScript for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija)
+The code can be run in [Violentmonkey](https://violentmonkey.github.io/) extension for _Google Chrome_, _Firefox_, _Microsoft Edge_.
 
 ```js
 jQuery.noConflict();
