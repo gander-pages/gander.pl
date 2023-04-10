@@ -1,4 +1,8 @@
-# ~/.ssh/config
+---
+title: ~/.ssh/config
+tags: [ssh, config]
+---
+# {{ $frontmatter.title }}
 
 ## Config inheritance
 

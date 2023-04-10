@@ -1,4 +1,8 @@
-# Vue.js tips and tricks
+---
+title: Vue.js tips and tricks
+tags: [vue, vuejs, vue.js, vue3]
+---
+# {{ $frontmatter.title }}
 
 ## **Vue CLI**
 

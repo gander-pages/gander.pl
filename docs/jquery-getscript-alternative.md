@@ -1,4 +1,10 @@
-# jQuery `getScript` alternative
+---
+title: jQuery `getScript` alternative
+tags: [javascript, jquery, getScript, loadScript, async, await, promise]
+---
+# {{ $frontmatter.title }}
+
+{{ $frontmatter.tagz }}
 
 ```js
 const getScript = url => new Promise((resolve, reject) => {

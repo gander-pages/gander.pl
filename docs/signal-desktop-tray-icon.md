@@ -1,4 +1,8 @@
-# Signal Desktop Tray Icon
+---
+title: Signal Desktop Tray Icon
+tags: [signal, desktop, tray, icon]
+---
+# {{ $frontmatter.title }}
 
 #### Show tray icon but don't show app window
 ```bash

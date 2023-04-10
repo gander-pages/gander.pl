@@ -1,4 +1,8 @@
-# Debian CheatSheet
+---
+title: Debian CheatSheet
+tags: [debian, linux]
+---
+# {{ $frontmatter.title }}
 
 | command                            | description                           |
 |------------------------------------|---------------------------------------|

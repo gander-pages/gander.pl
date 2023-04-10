@@ -1,4 +1,8 @@
-# Scanning for btrfs file systems
+---
+title: Scanning for btrfs file systems
+tags: [linux, ubuntu]
+---
+# {{ $frontmatter.title }}
 
 It's not _"BTRFS scanning"_ hangs up system loading. After removing `btrfs-tools`, system still hanging here for few seconds. Sometimes new info appears: _"Begin: Running /scripts/local-premount"_.
 

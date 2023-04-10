@@ -1,4 +1,8 @@
-# Set GRUB to remember recently selected os
+---
+title: Set GRUB to remember recently selected os
+tags: [linux, grub]
+---
+# {{ $frontmatter.title }}
 
 At file `/etc/default/grub` set:
 ```

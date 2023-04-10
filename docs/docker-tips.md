@@ -1,4 +1,8 @@
-# Docker tips
+---
+title: Docker tips
+tags: [docker, tips]
+---
+# {{ $frontmatter.title }}
 
 ## Remove:
 

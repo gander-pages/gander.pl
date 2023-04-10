@@ -1,4 +1,8 @@
-# RegEx change chars case
+---
+title: RegEx change chars case
+tags: [regex, case, uppercase, lowercase, initial, first, capital]
+---
+# {{ $frontmatter.title }}
 
 | pattern | info                | example          |
 |---------|---------------------|------------------|

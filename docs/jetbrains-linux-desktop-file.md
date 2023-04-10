@@ -1,4 +1,8 @@
-# JetBrains Linux .desktop file
+---
+title: JetBrains Linux .desktop file
+tags: [jetbrains, linux, desktop, file]
+---
+# {{ $frontmatter.title }}
 
 Locations: `~/.local/share/applications` or `/usr/share/applications`
 

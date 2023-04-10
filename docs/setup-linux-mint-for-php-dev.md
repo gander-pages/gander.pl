@@ -1,4 +1,8 @@
-# Setup Linux Mint for PHP Dev
+---
+title: Setup Linux Mint for PHP Dev
+tags: [linux, php, dev]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 cat /etc/upstream-release/lsb-release

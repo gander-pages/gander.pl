@@ -1,4 +1,8 @@
-# MySQL utf8 Default Charset
+---
+title: MySQL utf8 Default Charset
+tags: [mysql, utf8, utf8mb4]
+---
+# {{ $frontmatter.title }}
 
 `my.cnf`
 

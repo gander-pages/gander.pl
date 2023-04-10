@@ -1,4 +1,8 @@
-# Docker Compose v2 - new dev hacks
+---
+title: Docker Compose v2 - new dev hacks
+tags: [docker, docker-compose, devops, dev-hacks]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 has_container_up() {

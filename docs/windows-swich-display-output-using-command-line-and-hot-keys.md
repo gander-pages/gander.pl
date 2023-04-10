@@ -1,4 +1,8 @@
-# Windows: Switch Display Output using command line and hot keys
+---
+title: 'Windows: Switch Display Output using command line and hot keys'
+tags: [windows, display, switch, command, line, hot, key]
+---
+# {{ $frontmatter.title }}
 
 Command line:
 

@@ -1,4 +1,8 @@
-# yargs
+---
+title: yargs
+tags: [yargs]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 npm install yargs @types/yargs

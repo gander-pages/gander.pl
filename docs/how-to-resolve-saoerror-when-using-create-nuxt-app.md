@@ -1,4 +1,8 @@
-# How to resolve SAOError when using create-nuxt-app
+---
+title: How to resolve SAOError when using create-nuxt-app
+tags: [nuxt, create-nuxt-app, sao, saoerror]
+---
+# {{ $frontmatter.title }}
 
 When:
 

@@ -1,4 +1,8 @@
-# Hardware Tools
+---
+title: Hardware Tools
+tags: [hardware, tools]
+---
+# {{ $frontmatter.title }}
 
 *   Speccy
 *   Intel Extreme Tuning Utility

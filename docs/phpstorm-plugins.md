@@ -1,4 +1,8 @@
-# PhpStorm Plugins
+---
+title: PhpStorm Plugins
+tags: [phpstorm, plugins]
+---
+# {{ $frontmatter.title }}
 
 *   [.env files support](https://plugins.jetbrains.com/plugin/9525--env-files-support)
 *   [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore)

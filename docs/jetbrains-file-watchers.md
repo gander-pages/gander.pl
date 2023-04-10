@@ -1,4 +1,8 @@
-# JetBrains IDE - File Watchers
+---
+title: JetBrains IDE - File Watchers
+tags: [vue, vue-cli, vue-cli-service, jetbrains, ide, file watchers, file watcher, filewatch]
+---
+# {{ $frontmatter.title }}
 
 ### File type:
 

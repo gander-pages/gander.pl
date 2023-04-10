@@ -1,4 +1,8 @@
-# Delete multiple connections in LinkedIn
+---
+title: Delete multiple connections in LinkedIn
+tags: [linkedin, javascript]
+---
+# {{ $frontmatter.title }}
 
 1.   Use Google Chrome
 2.   Go to page _My network » Connections_

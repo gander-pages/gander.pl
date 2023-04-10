@@ -1,4 +1,8 @@
-# Docker Engine and Docker Compose on Ubuntu 16.04
+---
+title: Docker Engine and Docker Compose on Ubuntu 16.04
+tags: [docker, ubuntu, docker-compose]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 echo deb https://apt.dockerproject.org/repo ubuntu-xenial main | sudo tee /etc/apt/sources.list.d/docker.list

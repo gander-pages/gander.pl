@@ -1,4 +1,8 @@
-# Doctrine DebugStack with Symfony Console Table
+---
+title: Doctrine DebugStack with Symfony Console Table
+tags: [doctrine, debugstack, symfony, console, table]
+---
+# {{ $frontmatter.title }}
 
 ```php
 $logger = new DebugStack();

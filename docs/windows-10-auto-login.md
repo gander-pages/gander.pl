@@ -1,4 +1,8 @@
-# Windows 10 Auto LogIn
+---
+title: Windows 10 Auto LogIn
+tags: [windows, windows10, login, auto]
+---
+# {{ $frontmatter.title }}
 
 1.  Click `Windows+R`
 2.  Type `Netplwiz`

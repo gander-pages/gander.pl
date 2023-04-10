@@ -1,4 +1,8 @@
-# JavaScript fixtures
+---
+title: JavaScript fixtures
+tags: [javascript, snippets]
+---
+# {{ $frontmatter.title }}
 
 Google Chrome Extension: [Custom JavaScript for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija)
 

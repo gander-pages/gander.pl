@@ -1,4 +1,8 @@
-# Git tricks
+---
+title: Git tricks
+tags: [git]
+---
+# {{ $frontmatter.title }}
 
 **Start Git with an empty:**
 

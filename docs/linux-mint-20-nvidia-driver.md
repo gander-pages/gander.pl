@@ -1,4 +1,8 @@
-# Linux Mint 20 NVIDIA Driver
+---
+title: Linux Mint 20 NVIDIA Driver
+tags: [linux, mint, nvidia, driver]
+---
+# {{ $frontmatter.title }}
 
 Config:
 -------

@@ -1,4 +1,8 @@
-# Take all registered jQuery Event Handlers
+---
+title: Take all registered jQuery Event Handlers
+tags: [jquery, event, handler, registered, take, all]
+---
+# {{ $frontmatter.title }}
 
 ```js
 jQuery(function ($) {

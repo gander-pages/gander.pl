@@ -1,4 +1,8 @@
-# Node.js and NPM+NPX
+---
+title: Node.js and NPM+NPX
+tags: [nodejs, npm, npx, bash, bash_profile]
+---
+# {{ $frontmatter.title }}
 
 *   [https://nodejs.org/en/](https://nodejs.org/en/)
 *   [https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions)

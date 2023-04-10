@@ -1,4 +1,8 @@
-# Ansible cheatsheet
+---
+title: Ansible cheatsheet
+tags: [ansible, cheatsheet]
+---
+# {{ $frontmatter.title }}
 
 ## Install
 

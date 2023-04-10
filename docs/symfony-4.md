@@ -1,4 +1,8 @@
-# Symfony 4
+---
+title: Symfony 4
+tags: [symfony, sonata, sonata-block-bundle, sonata-project]
+---
+# {{ $frontmatter.title }}
 
 ## sonata-project/block-bundle
 

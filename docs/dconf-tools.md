@@ -1,4 +1,8 @@
-# dconf-tools
+---
+title: dconf-tools
+tags: [dconf, dconf-tools]
+---
+# {{ $frontmatter.title }}
 
 Install: `sudo apt-get install dconf-tools`
 

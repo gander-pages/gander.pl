@@ -1,4 +1,8 @@
-# MATE Desktop Environment
+---
+title: MATE Desktop Environment
+tags: [linux, mate, desktop]
+---
+# {{ $frontmatter.title }}
 
 ### Disable double lock screen
 

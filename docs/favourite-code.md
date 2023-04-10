@@ -1,4 +1,8 @@
-# Favourite code
+---
+title: Favourite code
+tags: [code, php, symfony, doctrine, pimple, silex]
+---
+# {{ $frontmatter.title }}
 
 ## Standalone
 

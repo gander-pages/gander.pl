@@ -1,4 +1,8 @@
-# Graylog Memory/Heap usage
+---
+title: Graylog Memory/Heap usage
+tags: [graylog, memory, heap]
+---
+# {{ $frontmatter.title }}
 
 For memory usage ~780MiB:
 

@@ -1,4 +1,8 @@
-# Transparent Delayed Screen Autolock
+---
+title: Transparent Delayed Screen Autolock
+tags: [linux, bash, xautolock, xtrlock]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 sudo apt install xtrlock xautolock

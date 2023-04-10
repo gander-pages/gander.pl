@@ -1,4 +1,8 @@
-# PHP Tricks and Tips
+---
+title: PHP Tricks and Tips
+tags: [php, tricks, tips]
+---
+# {{ $frontmatter.title }}
 
 Deployer / Capistrano with OPcache
 ==================================

@@ -1,4 +1,8 @@
-# InPost tracking number to link converter
+---
+title: InPost tracking number to link converter
+tags: [javascript, inpost, tracking, number, link, parcel, allegro, manager]
+---
+# {{ $frontmatter.title }}
 
 Google Chrome Extension: [Custom JavaScript for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija)
 

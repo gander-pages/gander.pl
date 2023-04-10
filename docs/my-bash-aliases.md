@@ -1,4 +1,8 @@
-# My .bash\_aliases
+---
+title: My .bash_aliases
+tags: [bash, aliases]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 # Misc

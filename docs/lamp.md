@@ -1,4 +1,8 @@
-# LAMP
+---
+title: LAMP
+tags: [docker, docker-compose, php, mysql, postgresql, phpmyadmin]
+---
+# {{ $frontmatter.title }}
 
 `docker-compose.yml`
 

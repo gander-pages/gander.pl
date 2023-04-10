@@ -1,4 +1,8 @@
-# sudo without password
+---
+title: sudo without password
+tags: [linux, sudo, password]
+---
+# {{ $frontmatter.title }}
 
 To set `sudo` without asking for a password:
 

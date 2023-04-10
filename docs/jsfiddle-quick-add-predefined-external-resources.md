@@ -1,4 +1,8 @@
-# JSFiddle quick add predefined external resources
+---
+title: JSFiddle quick add predefined external resources
+tags: [jsfiddle]
+---
+# {{ $frontmatter.title }}
 
 Google Chrome Extension: [Custom JavaScript for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija)
 

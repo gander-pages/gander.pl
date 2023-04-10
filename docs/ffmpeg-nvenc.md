@@ -1,4 +1,8 @@
-# FFmpeg with NVIDIA Acceleration
+---
+title: FFmpeg with NVIDIA Acceleration
+tags: [ffmpeg, nvidia, hardware acceleration]
+---
+# {{ $frontmatter.title }}
 
 ## Using NVIDIA hardware acceleration in FFmpeg/libav requires the following steps
 

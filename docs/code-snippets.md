@@ -1,4 +1,8 @@
-# Code Snippets
+---
+title: Code Snippets
+tags: [code, snippets]
+---
+# {{ $frontmatter.title }}
 
 ## Adminer fast select tables by prefix
 

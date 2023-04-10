@@ -1,4 +1,8 @@
-# .bash\_profile
+---
+title: .bash_profile
+tags: [bash, bash_profile, bashrc, bash_aliases, .bash_profile, .bashrc, .bash_aliases, .prof]
+---
+# {{ $frontmatter.title }}
 
 ## `.bash_profile`
 

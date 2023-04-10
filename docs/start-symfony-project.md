@@ -1,4 +1,8 @@
-# Start Symfony Project
+---
+title: Start Symfony Project
+tags: [symfony, php, composer, start]
+---
+# {{ $frontmatter.title }}
 
 ```bash
 composer create-project symfony/website-skeleton .

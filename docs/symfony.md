@@ -1,4 +1,8 @@
-# Symfony 5/6
+---
+title: Symfony 5/6
+tags: [symfony, php]
+---
+# {{ $frontmatter.title }}
 
 ## Symfony Form Validation
 

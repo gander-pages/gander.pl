@@ -1,4 +1,8 @@
-# PhpStorm tips and tricks
+---
+title: PhpStorm tips and tricks
+tags: [phpstorm, php, tips, tricks]
+---
+# {{ $frontmatter.title }}
 
 ### Pimple File Dumper - Helper Provider for Silex Idea Plugin
 
