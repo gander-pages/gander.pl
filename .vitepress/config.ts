@@ -25,6 +25,23 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Solutions, tips & tricks:',
+          items: [
+            {
+                  text: 'Services',
+                  items: [
+                    {
+                      text: 'IFTTT',
+                      items: [
+                        { text: 'Maker Webhooks', link: '/solutions/services/ifttt/maker-webhooks' },
+                      ]
+                    },
+
+                  ]
+            },
+          ],
+      },
+      {
+        text: 'Outdated:',
         items: [
           { text: 'Debian CheatSheet', link: '/debian-cheatsheet' },
           { text: 'Doctrine DebugStack with Symfony Console Table', link: '/doctrine-debugstack-with-symfony-console-table' },
