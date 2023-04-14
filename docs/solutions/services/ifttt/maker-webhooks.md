@@ -6,8 +6,6 @@ tags: [IFTTT, Maker, Webhooks, JSON, payload, value1, value2, value3, JsonPayloa
 
 How to configure [IFTTT Maker Webhooks](https://ifttt.com/maker_webhooks) service?
 
------
-
 ## Working configuration:
 
 ### Ingredients
@@ -59,8 +57,6 @@ Ingredients:
 ```text
 JsonPayload: {"example": ["lorem","ipsum"], "value1": "foo", "value2": "bar"}
 ```
-
------
 
 ## Not working configurations:
 
