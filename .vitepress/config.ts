@@ -76,6 +76,6 @@ export default defineConfig({
       pattern: 'https://github.com/gander/gander.pl/edit/master/docs/:path'
     },
 
-
+    outline: 'deep',
   }
 })
