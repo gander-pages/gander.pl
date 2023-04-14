@@ -8,6 +8,11 @@ How to configure [IFTTT Maker Webhooks](https://ifttt.com/maker_webhooks) servic
 
 ## Working configuration:
 
+::: warning Attention
+Note the **`/json/`** part in the webhook address.<br/>
+This specifies whether the request contains arbitrary JSON or with required keys.
+:::
+
 ### Ingredients
 
 + Send: "Event with 3 JSON values" (JSON payload containing value1, value2, value3)
