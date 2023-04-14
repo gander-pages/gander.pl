@@ -17,7 +17,6 @@ How to configure [IFTTT Maker Webhooks](https://ifttt.com/maker_webhooks) servic
 > POST /trigger/example_web_request/with/key/MyUniqueApiKey HTTP/2
 > Host: maker.ifttt.com
 > content-type: application/json
-> accept: */*
 > content-length: 68
 
 | {
@@ -43,7 +42,6 @@ Value3: none
 > POST /trigger/example_web_request_with_json_payload/json/with/key/MyUniqueApiKey HTTP/2
 > Host: maker.ifttt.com
 > content-type: application/json
-> accept: */*
 > content-length: 68
 
 | {
@@ -69,7 +67,6 @@ JsonPayload: {"example": ["lorem","ipsum"], "value1": "foo", "value2": "bar"}
 > POST /trigger/example_web_request/json/with/key/MyUniqueApiKey HTTP/2
 > Host: maker.ifttt.com
 > content-type: application/json
-> accept: */*
 > content-length: 68
 
 | {
@@ -95,7 +92,6 @@ Value3: none
 > POST /trigger/example_web_request_with_json_payload/with/key/MyUniqueApiKey HTTP/2
 > Host: maker.ifttt.com
 > content-type: application/json
-> accept: */*
 > content-length: 68
 
 | {
