@@ -14,7 +14,7 @@ How to configure [IFTTT Maker Webhooks](https://ifttt.com/maker_webhooks) servic
 + Trigger: "Receive a web request" (Value1, Value2, Value3 ingredients)
 
 ```http
-POST /trigger/example_web_request/with/key/MyUniqueApiKey HTTP/2
+POST /trigger/web_request/with/key/MyUniqueApiKey HTTP/2
 Host: maker.ifttt.com
 content-type: application/json
 content-length: 68
@@ -40,7 +40,7 @@ Value3: none
 + Trigger: "Receive a web request with a JSON payload" (JsonPayload ingredient)
 
 ```http
-POST /trigger/example_web_request_with_json_payload/json/with/key/MyUniqueApiKey HTTP/2
+POST /trigger/web_request_json_payload/json/with/key/MyUniqueApiKey HTTP/2
 Host: maker.ifttt.com
 content-type: application/json
 content-length: 68
@@ -66,7 +66,7 @@ JsonPayload: {"example": ["lorem","ipsum"], "value1": "foo", "value2": "bar"}
 + Trigger: "Receive a web request" (Value1, Value2, Value3 ingredients)
 
 ```http
-POST /trigger/example_web_request/json/with/key/MyUniqueApiKey HTTP/2
+POST /trigger/web_request/json/with/key/MyUniqueApiKey HTTP/2
 Host: maker.ifttt.com
 content-type: application/json
 content-length: 68
@@ -92,7 +92,7 @@ Value3: none
 + Trigger: "Receive a web request with a JSON payload" (JsonPayload ingredient)
 
 ```http
-POST /trigger/example_web_request_with_json_payload/with/key/MyUniqueApiKey HTTP/2
+POST /trigger/web_request_json_payload/with/key/MyUniqueApiKey HTTP/2
 Host: maker.ifttt.com
 content-type: application/json
 content-length: 68
