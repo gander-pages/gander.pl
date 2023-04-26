@@ -12,10 +12,9 @@ export default defineConfig({
       'script',
       {
         'async': 'true',
-        'defer': 'true',
-        'data-website-id': 'ba6e3a22-e496-4096-bd0a-23d48dfce33a',
+        'data-website-id': '17f90c6e-8a73-4e55-bfa7-027ff8b5eee7',
         'data-domains': 'gander.pl',
-        'src': 'https://mws02-40122.wykr.es/umami.js',
+        'src': 'https://mws02-41122.wykr.es/script.js',
       },
     ],
   ],
