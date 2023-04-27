@@ -1,97 +1,90 @@
-import { defineConfig } from 'vitepress'
+import {defineConfig} from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lastUpdated: true,
-  title: "Gander Site",
-  description: "Code solutions, tips and tricks.",
-  srcDir: 'docs',
-  cleanUrls: true,
-  head: [
-    [
-      'script',
-      {
-        'async': 'true',
-        'data-website-id': '17f90c6e-8a73-4e55-bfa7-027ff8b5eee7',
-        'data-domains': 'gander.pl',
-        'src': 'https://mws02-41122.wykr.es/script.js',
-      },
-    ],
-  ],
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-
-    sidebar: [
-      {
-        text: 'Solutions, tips & tricks:',
-          items: [
+    lastUpdated: true,
+    title: 'Gander Site',
+    description: 'Code solutions, tips and tricks.',
+    srcDir: 'docs',
+    cleanUrls: true,
+    head: [
+        [
+            'script',
             {
-                  text: 'Services',
-                  items: [
+                'async': 'true',
+                'data-website-id': '17f90c6e-8a73-4e55-bfa7-027ff8b5eee7',
+                'data-domains': 'gander.pl',
+                'src': 'https://mws02-41122.wykr.es/script.js',
+            },
+        ],
+    ],
+    themeConfig: {
+        // https://vitepress.dev/reference/default-theme-config
+
+        sidebar: [
+            {
+                text: 'Services',
+                items: [
                     {
-                      text: 'IFTTT',
-                      items: [
-                        { text: 'Maker Webhooks', link: '/solutions/services/ifttt/maker-webhooks' },
-                      ]
+                        text: 'IFTTT: Maker Webhooks',
+                        link: '/solutions/services/ifttt-maker-webhooks',
                     },
 
-                  ]
+                ],
             },
-          ],
-      },
-      {
-        text: 'Outdated:',
-        items: [
-          { text: 'Debian CheatSheet', link: '/debian-cheatsheet' },
-          { text: 'Doctrine DebugStack with Symfony Console Table', link: '/doctrine-debugstack-with-symfony-console-table' },
-          { text: 'FFmpeg with NVIDIA Acceleration', link: '/ffmpeg-nvenc' },
-          { text: 'Git tricks', link: '/git-tricks' },
-          { text: 'Graylog Memory/Heap usage', link: '/graylog-memory-heap-usage' },
-          { text: 'How to connect to VPN with CLI password prompting', link: '/how-to-connect-to-vpn-with-cli-password-prompting' },
-          { text: 'How to resolve SAOError when using create-nuxt-app', link: '/how-to-resolve-saoerror-when-using-create-nuxt-app' },
-          { text: 'JSFiddle quick add predefined external resources', link: '/jsfiddle-quick-add-predefined-external-resources' },
-          { text: 'JetBrains Linux .desktop file', link: '/jetbrains-linux-desktop-file' },
-          { text: 'Linux Mint 20 NVIDIA Driver', link: '/linux-mint-20-nvidia-driver' },
-          { text: 'Linux reboot to EFI', link: '/linux-reboot-to-efi' },
-          { text: 'MATE Desktop Environment', link: '/mate-desktop-environment' },
-          { text: 'MySQL utf8 Default Charset', link: '/mysql-utf8-default-charset' },
-          { text: 'PhpStorm Inotify Watches Limit', link: '/phpstorm-inotify-watches-limit' },
-          { text: 'PhpStorm Plugins', link: '/phpstorm-plugins' },
-          { text: 'RegEx change chars case', link: '/regex-change-chars-case' },
-          { text: 'Scanning for btrfs file systems', link: '/scanning-for-btrfs-file-systems' },
-          { text: 'Set GRUB to remember recently selected os', link: '/set-grub-to-remember-recently-selected-os' },
-          { text: 'Signal Desktop Tray Icon', link: '/signal-desktop-tray-icon' },
-          { text: 'Symfony 5/6', link: '/symfony' },
-          { text: 'Take all registered jQuery Event Handlers', link: '/take-all-registered-jquery-event-handlers' },
-          { text: 'Transparent Delayed Screen Autolock', link: '/transparent-delayed-screen-autolock' },
-          { text: 'Windows 10 Auto LogIn', link: '/windows-10-auto-login' },
-          { text: 'Windows: Switch Display Output using command line and hot keys', link: '/windows-swich-display-output-using-command-line-and-hot-keys' },
-          { text: 'dconf-tools', link: '/dconf-tools' },
-          { text: 'jQuery getScript alternative', link: '/jquery-getscript-alternative' },
-          { text: '~/.ssh/config', link: '/ssh-config' },
-        ]
-      }
-    ],
+            {
+                text: 'Outdated:',
+                items: [
+                    {text: 'Debian CheatSheet', link: '/debian-cheatsheet'},
+                    {text: 'Doctrine DebugStack with Symfony Console Table', link: '/doctrine-debugstack-with-symfony-console-table'},
+                    {text: 'FFmpeg with NVIDIA Acceleration', link: '/ffmpeg-nvenc'},
+                    {text: 'Git tricks', link: '/git-tricks'},
+                    {text: 'Graylog Memory/Heap usage', link: '/graylog-memory-heap-usage'},
+                    {text: 'How to connect to VPN with CLI password prompting', link: '/how-to-connect-to-vpn-with-cli-password-prompting'},
+                    {text: 'How to resolve SAOError when using create-nuxt-app', link: '/how-to-resolve-saoerror-when-using-create-nuxt-app'},
+                    {text: 'JSFiddle quick add predefined external resources', link: '/jsfiddle-quick-add-predefined-external-resources'},
+                    {text: 'JetBrains Linux .desktop file', link: '/jetbrains-linux-desktop-file'},
+                    {text: 'Linux Mint 20 NVIDIA Driver', link: '/linux-mint-20-nvidia-driver'},
+                    {text: 'Linux reboot to EFI', link: '/linux-reboot-to-efi'},
+                    {text: 'MATE Desktop Environment', link: '/mate-desktop-environment'},
+                    {text: 'MySQL utf8 Default Charset', link: '/mysql-utf8-default-charset'},
+                    {text: 'PhpStorm Inotify Watches Limit', link: '/phpstorm-inotify-watches-limit'},
+                    {text: 'PhpStorm Plugins', link: '/phpstorm-plugins'},
+                    {text: 'RegEx change chars case', link: '/regex-change-chars-case'},
+                    {text: 'Scanning for btrfs file systems', link: '/scanning-for-btrfs-file-systems'},
+                    {text: 'Set GRUB to remember recently selected os', link: '/set-grub-to-remember-recently-selected-os'},
+                    {text: 'Signal Desktop Tray Icon', link: '/signal-desktop-tray-icon'},
+                    {text: 'Symfony 5/6', link: '/symfony'},
+                    {text: 'Take all registered jQuery Event Handlers', link: '/take-all-registered-jquery-event-handlers'},
+                    {text: 'Transparent Delayed Screen Autolock', link: '/transparent-delayed-screen-autolock'},
+                    {text: 'Windows 10 Auto LogIn', link: '/windows-10-auto-login'},
+                    {text: 'Windows: Switch Display Output using command line and hot keys', link: '/windows-swich-display-output-using-command-line-and-hot-keys'},
+                    {text: 'dconf-tools', link: '/dconf-tools'},
+                    {text: 'jQuery getScript alternative', link: '/jquery-getscript-alternative'},
+                    {text: '~/.ssh/config', link: '/ssh-config'},
+                ],
+            },
+        ],
 
-    socialLinks: [
-      {
-        icon: 'github',
-        link: 'https://github.com/gander',
-      },
-      {
-        icon: {svg: '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32px" height="38px" viewBox="-135 22 32 38" xml:space="preserve"><g><polygon fill="#BCBBBB" points="-108.5,56.2 -108.5,46.3 -105.2,46.3 -105.2,59.5 -135,59.5 -135,46.3 -131.7,46.3 -131.7,56.2"/><path fill="#F48024" d="M-128,45.4l16.2,3.4l0.7-3.2l-16.2-3.4L-128,45.4z M-125.9,37.6l15,7l1.4-3l-15-7L-125.9,37.6z M-121.7,30.2l12.7,10.6l2.1-2.5l-12.7-10.6L-121.7,30.2z M-113.5,22.4l-2.7,2l9.9,13.3l2.7-2L-113.5,22.4z M-128.4,52.9h16.6 v-3.3h-16.6V52.9z"/></g></svg>'},
-        link: 'https://stackoverflow.com/users/4559414/gander',
-      },
-      {
-        icon: 'linkedin',
-        link: 'https://www.linkedin.com/in/adam-gasowski/',
-      },
-    ],
+        socialLinks: [
+            {
+                icon: 'github',
+                link: 'https://github.com/gander',
+            },
+            {
+                icon: {svg: '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32px" height="38px" viewBox="-135 22 32 38" xml:space="preserve"><g><polygon fill="#BCBBBB" points="-108.5,56.2 -108.5,46.3 -105.2,46.3 -105.2,59.5 -135,59.5 -135,46.3 -131.7,46.3 -131.7,56.2"/><path fill="#F48024" d="M-128,45.4l16.2,3.4l0.7-3.2l-16.2-3.4L-128,45.4z M-125.9,37.6l15,7l1.4-3l-15-7L-125.9,37.6z M-121.7,30.2l12.7,10.6l2.1-2.5l-12.7-10.6L-121.7,30.2z M-113.5,22.4l-2.7,2l9.9,13.3l2.7-2L-113.5,22.4z M-128.4,52.9h16.6 v-3.3h-16.6V52.9z"/></g></svg>'},
+                link: 'https://stackoverflow.com/users/4559414/gander',
+            },
+            {
+                icon: 'linkedin',
+                link: 'https://www.linkedin.com/in/adam-gasowski/',
+            },
+        ],
 
-    editLink: {
-      pattern: 'https://github.com/gander/gander.pl/edit/master/docs/:path'
+        editLink: {
+            pattern: 'https://github.com/gander/gander.pl/edit/master/docs/:path',
+        },
+
+        outline: 'deep',
     },
-
-    outline: 'deep',
-  }
-})
+});
