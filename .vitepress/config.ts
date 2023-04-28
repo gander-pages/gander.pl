@@ -33,6 +33,16 @@ export default defineConfig({
                 ],
             },
             {
+                text: 'Tools / Projects',
+                items: [
+                    {
+                        text: 'NMS Frigate Calc',
+                        link: '/tools/nms-frigate-calc',
+                    },
+
+                ],
+            },
+            {
                 text: 'Outdated:',
                 items: [
                     {text: 'Debian CheatSheet', link: '/debian-cheatsheet'},
