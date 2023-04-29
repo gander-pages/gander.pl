@@ -33,7 +33,7 @@ content-length: 68
 ```
 
 Ingredients:
-```text
+```txt
 Value1: foo
 Value2: bar
 Value3: none
@@ -59,7 +59,7 @@ content-length: 68
 ```
 
 Ingredients:
-```text
+```txt
 JsonPayload: {"example": ["lorem","ipsum"], "value1": "foo", "value2": "bar"}
 ```
 
@@ -85,7 +85,7 @@ content-length: 68
 ```
 
 Ingredients:
-```text
+```txt
 Value1: none
 Value2: none
 Value3: none
@@ -111,7 +111,7 @@ content-length: 68
 ```
 
 Ingredients:
-```text
+```txt
 JsonPayload: none
 ```
 
