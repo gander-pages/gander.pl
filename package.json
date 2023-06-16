@@ -1,10 +1,24 @@
 {
+  "name": "gander.pl",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
+    "release": "release-it --only-version",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
+  "release-it": {
+    "git": {
+      "requireBranch": "master"
+    },
+    "npm": {
+      "publish": false,
+      "ignoreVersion": true
+    }
+  },
   "devDependencies": {
+    "release-it": "^15.11.0",
     "vitepress": "^1.0.0-alpha.65"
   }
 }
