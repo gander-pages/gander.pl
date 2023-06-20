@@ -7,16 +7,23 @@ export default defineConfig({
     description: 'Code solutions, tips and tricks.',
     srcDir: 'docs',
     cleanUrls: true,
+    async transformHead() {
+        if (process.env.VITE_UMAMI_ID && process.env.VITE_UMAMI_SRC) {
+            return [
+                [
+                    'script',
+                    {
+                        'async': 'true',
+                        'data-website-id': process.env.VITE_UMAMI_ID,
+                        'src': process.env.VITE_UMAMI_SRC,
+                    },
+                ],
+            ];
+        }
+
+        return [];
+    },
     head: [
-        [
-            'script',
-            {
-                'async': 'true',
-                'data-website-id': '17f90c6e-8a73-4e55-bfa7-027ff8b5eee7',
-                'data-domains': 'gander.pl',
-                'src': 'https://mws02-41122.wykr.es/script.js',
-            },
-        ],
         ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}],
         ['link', {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'}],
         ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'}],
