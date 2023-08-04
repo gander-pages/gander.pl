@@ -7,6 +7,7 @@ export default defineConfig({
     description: 'Code solutions, tips and tricks.',
     srcDir: 'docs',
     cleanUrls: true,
+    ignoreDeadLinks: true,
     async transformHead() {
         if (process.env.VITE_UMAMI_ID && process.env.VITE_UMAMI_SRC) {
             return [
