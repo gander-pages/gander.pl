@@ -45,6 +45,16 @@ export default defineConfig({
                 ],
             },
             {
+                text: 'Self-Hosted',
+                items: [
+                    {
+                        text: 'Fluentd: Docker Compose',
+                        link: '/solutions/self-hosted/fluentd-docker-compose',
+                    },
+
+                ],
+            },
+            {
                 text: 'Tools / Projects',
                 items: [
                     {
