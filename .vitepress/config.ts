@@ -65,6 +65,10 @@ export default defineConfig({
                                 text: 'Macro Preview',
                                 link: '/tools/jet-brains/file-watchers/macro-preview',
                             },
+                            {
+                                text: 'Using NVM',
+                                link: '/tools/jet-brains/file-watchers/using-nvm',
+                            },
                         ],
                     },
                     {
