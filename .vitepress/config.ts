@@ -59,6 +59,15 @@ export default defineConfig({
                 text: 'Tools / Projects',
                 items: [
                     {
+                        text: 'Jet Brains: File Watchers',
+                        items: [
+                            {
+                                text: 'Macro Preview',
+                                link: '/tools/jet-brains/file-watchers/macro-preview',
+                            },
+                        ],
+                    },
+                    {
                         text: 'NMS Frigate Calc',
                         link: '/tools/nms-frigate-calc',
                     },
