@@ -1,7 +1,7 @@
 {
   "name": "gander.pl",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "scripts": {
     "release": "release-it --only-version",
     "docs:dev": "vitepress dev",
