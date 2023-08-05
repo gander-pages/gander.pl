@@ -70,7 +70,7 @@ USER fluent
 
 ### `fluentd/conf/fluent.conf`
 
-```apacheconf
+```
 <source>
   @type forward
   port 24224
