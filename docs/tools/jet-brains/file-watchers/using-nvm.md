@@ -40,6 +40,12 @@ run my-script $FilePath$
 sudo ln -s /home/user/.nvm/current/bin/node /usr/local/bin/node
 ```
 
+<br/>
+
+::: details
+Environment variable `COMPILE_PARTIAL=true` is required to trigger `File Watcher` on SCSS partial files.
+:::
+
 Sources:
 + [NVM README](https://github.com/nvm-sh/nvm/blob/master/README.md)
 + [Using nvm with WebStorm or other IDE](https://medium.com/@danielzen/using-nvm-with-webstorm-or-other-ide-d7d374a84eb1)
