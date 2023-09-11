@@ -3,12 +3,6 @@
   "private": true,
   "version": "0.7.0",
   "type": "module",
-  "scripts": {
-    "release": "release-it --only-version",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  },
   "release-it": {
     "git": {
       "requireBranch": "master"
