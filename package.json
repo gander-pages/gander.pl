@@ -13,8 +13,8 @@
     }
   },
   "devDependencies": {
-    "@types/node": "^20.5.7",
+    "@types/node": "^20.6.2",
     "release-it": "^16.1.5",
-    "vitepress": "1.0.0-rc.11"
+    "vitepress": "1.0.0-rc.14"
   }
 }
