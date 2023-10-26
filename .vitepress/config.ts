@@ -56,6 +56,16 @@ export default defineConfig({
                 ],
             },
             {
+                text: 'Pimcore',
+                items: [
+                    {
+                        text: 'Action Argument Resolving',
+                        link: '/solutions/pimcore/action-argument-resolving',
+                    },
+
+                ],
+            },
+            {
                 text: 'Tools / Projects',
                 items: [
                     {
