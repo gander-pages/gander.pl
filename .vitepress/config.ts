@@ -82,6 +82,15 @@ export default defineConfig({
                         ],
                     },
                     {
+                        text: 'Open Street Map',
+                        items: [
+                            {
+                                text: 'JOSM: Install on Linux Mint',
+                                link: '/tools/osm/josm/install-on-linux-mint',
+                            },
+                        ],
+                    },
+                    {
                         text: 'NMS Frigate Calc',
                         link: '/tools/nms-frigate-calc',
                     },
