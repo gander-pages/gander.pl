@@ -21,10 +21,9 @@ pimcore:
                         - publish: false
                           delete: false
 ```
+If a user has a `ROLE_EDITOR`, he can perform `publish` and `delete` operations even if his role does not have them.
 
-When `ROLE_EDITOR` is granted, the user can perform `publish` and `delete` operations even if its role does not have them.
-
-::: details 
+::: info Keywords 
 + `condition` allows you to set an expression that must be met for a given action to be available
 + `save`, `publish`, `unpublish`, `delete`, `rename`, `view`, `settings`, `versions`, `properties` are available `DataObject` actions
 + `modify` is equivalent for `save`, `publish`, `unpublish`, `delete` and `rename`.
