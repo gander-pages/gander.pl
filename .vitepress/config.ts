@@ -62,7 +62,10 @@ export default defineConfig({
                         text: 'Action Argument Resolving',
                         link: '/solutions/pimcore/action-argument-resolving',
                     },
-
+                    {
+                        text: 'Workflow Management',
+                        link: '/solutions/pimcore/workflows',
+                    },
                 ],
             },
             {
