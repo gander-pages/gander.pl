@@ -10,7 +10,7 @@ tags: [ Open Street Map, OSM, Cheat Sheet ]
 |  [amenity]   | Udogodnienia | Obiekty użyteczne lub ważne dla odwiedzających i mieszkańców |   [`parking` `bench` `restaurant`][amenity.values]    |
 |  [leisure]   |  Rekreacja   | Obiekty rekreacyjne, gdzie ludzie spędzają czas wolny        |    [`garden` `park` `playground`][leisure.values]     |
 |  [tourism]   |  Turystyka   | Obiekty turystyczne, informacje oraz wsparcie dla turystów   | [`attraction` `hostel` `information`][tourism.values] |
-| [playground] |  Plac zabaw  | Obiekty rekreacyjne, gdzie dzieci spędzają czas wolny        | [`slide`, `structure`, `sandpit`][playground.values]  |
+| [playground] |  Plac zabaw  | Obiekty rekreacyjne, gdzie dzieci spędzają czas wolny        |  [`slide` `structure` `sandpit`][playground.values]   |
 
 [amenity]: https://wiki.openstreetmap.org/wiki/Pl:Key:amenity
 
