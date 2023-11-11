@@ -91,6 +91,10 @@ export default defineConfig({
                                 text: 'JOSM: Install on Linux Mint',
                                 link: '/tools/osm/josm/install-on-linux-mint',
                             },
+                            {
+                                text: 'OSM: Cheat Sheet',
+                                link: '/tools/osm/cheat-sheet',
+                            }
                         ],
                     },
                     {
