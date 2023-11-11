@@ -6,10 +6,11 @@ tags: [ Open Street Map, OSM, Cheat Sheet ]
 # {{ $frontmatter.title }}
 
 
-|   Klucz   |    Nazwa     | Opis                                                         |               Wartości / Przykłady               |
-|:---------:|:------------:|:-------------------------------------------------------------|:------------------------------------------------:|
-| [amenity] | Udogodnienia | Obiekty użyteczne lub ważne dla odwiedzających i mieszkańców | [`parking` `bench` `restaurant`][amenity.values] |
-| [leisure] |  Rekreacja   | Obiekty rekreacyjne, gdzie ludzie spędzają czas wolny        |  [`garden` `park` `playground`][leisure.values]  |
+|   Klucz   |    Nazwa     | Opis                                                         |                 Wartości / Przykłady                  |
+|:---------:|:------------:|:-------------------------------------------------------------|:-----------------------------------------------------:|
+| [amenity] | Udogodnienia | Obiekty użyteczne lub ważne dla odwiedzających i mieszkańców |   [`parking` `bench` `restaurant`][amenity.values]    |
+| [leisure] |  Rekreacja   | Obiekty rekreacyjne, gdzie ludzie spędzają czas wolny        |    [`garden` `park` `playground`][leisure.values]     |
+| [tourism] |  Turystyka   | Obiekty turystyczne, informacje oraz wsparcie dla turystów   | [`attraction` `hostel` `information`][tourism.values] |
 
 
 
@@ -30,3 +31,5 @@ tags: [ Open Street Map, OSM, Cheat Sheet ]
 [amenity.values]: https://taginfo.openstreetmap.org/keys/amenity#values
 [leisure]: https://wiki.openstreetmap.org/wiki/Pl:Key:leisure
 [leisure.values]: https://taginfo.openstreetmap.org/keys/leisure#values
+[tourism]: https://wiki.openstreetmap.org/wiki/Pl:Key:tourism
+[tourism.values]: https://taginfo.openstreetmap.org/keys/tourism#values
