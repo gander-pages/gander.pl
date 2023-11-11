@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
-    "release-it": "^16.2.1",
+    "release-it": "^17.0.0",
     "vitepress": "1.0.0-rc.25"
   }
 }
