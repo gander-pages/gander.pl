@@ -12,6 +12,12 @@
       "ignoreVersion": true
     }
   },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "release": "release-it --only-version"
+  },
   "devDependencies": {
     "@types/node": "^20.9.2",
     "release-it": "^17.0.0",
