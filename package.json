@@ -19,8 +19,8 @@
     "release": "release-it --only-version"
   },
   "devDependencies": {
-    "@types/node": "^20.9.2",
+    "@types/node": "^20.9.4",
     "release-it": "^17.0.0",
-    "vitepress": "1.0.0-rc.29"
+    "vitepress": "^1.0.0-rc.30"
   }
 }
