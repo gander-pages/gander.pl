@@ -66,6 +66,10 @@ export default defineConfig({
                         text: 'Workflow Management',
                         link: '/solutions/pimcore/workflows',
                     },
+                    {
+                        text: 'ExtJS',
+                        link: '/solutions/pimcore/ext-js',
+                    },
                 ],
             },
             {
