@@ -92,13 +92,13 @@ export default defineConfig({
                         text: 'Open Street Map',
                         items: [
                             {
+                                text: 'OSM: Cheat Sheet',
+                                link: 'https://wiki.openstreetmap.org/wiki/User:GanderPL',
+                            },
+                            {
                                 text: 'JOSM: Install on Linux Mint',
                                 link: '/tools/osm/josm/install-on-linux-mint',
                             },
-                            {
-                                text: 'OSM: Cheat Sheet',
-                                link: '/tools/osm/cheat-sheet',
-                            }
                         ],
                     },
                     {
