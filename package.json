@@ -19,9 +19,9 @@
     "release": "release-it --only-version"
   },
   "devDependencies": {
-    "@types/bun": "^1.0.1",
-    "@types/node": "^20.11.0",
+    "@types/bun": "^1.0.3",
+    "@types/node": "^20.11.5",
     "release-it": "^17.0.1",
-    "vitepress": "^1.0.0-rc.36"
+    "vitepress": "^1.0.0-rc.40"
   }
 }
