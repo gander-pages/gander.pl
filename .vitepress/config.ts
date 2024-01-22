@@ -2,7 +2,6 @@ import {defineConfig} from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    lastUpdated: true,
     title: 'Gander Site',
     description: 'Code solutions, tips and tricks.',
     srcDir: 'docs',
