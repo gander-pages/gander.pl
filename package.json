@@ -6,10 +6,6 @@
   "release-it": {
     "git": {
       "requireBranch": "master"
-    },
-    "npm": {
-      "publish": false,
-      "ignoreVersion": true
     }
   },
   "scripts": {
@@ -19,9 +15,9 @@
     "release": "release-it --only-version"
   },
   "devDependencies": {
-    "@types/bun": "^1.0.3",
-    "@types/node": "^20.11.5",
-    "release-it": "^17.0.1",
+    "@types/bun": "^1.0.4",
+    "@types/node": "^20.11.7",
+    "release-it": "^17.0.3",
     "vitepress": "^1.0.0-rc.40"
   }
 }
