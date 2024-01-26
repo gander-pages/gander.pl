@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress';
+import {defineConfig, HeadConfig} from 'vitepress';
 import {sentryVitePlugin} from '@sentry/vite-plugin';
 
 // https://vitepress.dev/reference/site-config
@@ -9,20 +9,36 @@ export default defineConfig({
     cleanUrls: true,
     ignoreDeadLinks: true,
     async transformHead() {
+        const scripts: HeadConfig[] = [];
+
         if (process.env.VITE_UMAMI_ID && process.env.VITE_UMAMI_SRC) {
-            return [
-                [
-                    'script',
-                    {
-                        'async': 'true',
-                        'data-website-id': process.env.VITE_UMAMI_ID,
-                        'src': process.env.VITE_UMAMI_SRC,
-                    },
-                ],
-            ];
+            scripts.push([
+                'script',
+                {
+                    'async': 'true',
+                    'data-website-id': process.env.VITE_UMAMI_ID,
+                    'src': process.env.VITE_UMAMI_SRC,
+                },
+            ]);
         }
 
-        return [];
+        if (process.env.SENTRY_DSN) {
+            scripts.push([
+                'script',
+                {
+                    defer: 'true',
+                    src: './bugs-script',
+                },
+            ], [
+                'script',
+                {
+                    defer: 'true',
+                    src: './bugs-init',
+                },
+            ]);
+        }
+
+        return scripts;
     },
     head: [
         ['link', {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}],
