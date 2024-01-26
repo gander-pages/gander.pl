@@ -1,4 +1,5 @@
 import {defineConfig} from 'vitepress';
+import {sentryVitePlugin} from '@sentry/vite-plugin';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -161,5 +162,19 @@ export default defineConfig({
         },
 
         outline: 'deep',
+    },
+    vite: {
+        build: {
+            sourcemap: true,
+        },
+        plugins: [
+            sentryVitePlugin({
+                url: process.env.SENTRY_URL,
+                debug: process.env.NODE_ENV === 'development',
+                org: process.env.SENTRY_ORG,
+                project: process.env.SENTRY_PROJECT,
+                authToken: process.env.SENTRY_AUTH_TOKEN,
+            }),
+        ],
     },
 });
