@@ -180,11 +180,8 @@ export default defineConfig({
         outline: 'deep',
     },
     vite: {
-        build: {
-            sourcemap: true,
-        },
         plugins: [
-            sentryVitePlugin({
+            process.env.SENTRY_AUTH_TOKEN && sentryVitePlugin({
                 url: process.env.SENTRY_URL,
                 debug: process.env.NODE_ENV === 'development',
                 org: process.env.SENTRY_ORG,

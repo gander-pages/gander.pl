@@ -15,10 +15,10 @@
     "release": "release-it --only-version"
   },
   "devDependencies": {
-    "@sentry/vite-plugin": "^2.10.3",
-    "@types/bun": "^1.0.4",
-    "@types/node": "^20.11.7",
-    "release-it": "^17.0.3",
-    "vitepress": "^1.0.0-rc.40"
+    "@sentry/vite-plugin": "^2.14.1",
+    "@types/bun": "^1.0.5",
+    "@types/node": "^20.11.19",
+    "release-it": "^17.0.5",
+    "vitepress": "^1.0.0-rc.42"
   }
 }
