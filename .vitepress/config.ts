@@ -65,10 +65,13 @@ export default defineConfig({
                 text: 'Self-Hosted',
                 items: [
                     {
+                        text: 'Sentry: Install & Backup',
+                        link: '/solutions/self-hosted/sentry',
+                    },
+                    {
                         text: 'Fluentd: Docker Compose',
                         link: '/solutions/self-hosted/fluentd-docker-compose',
                     },
-
                 ],
             },
             {
