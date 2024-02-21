@@ -27,13 +27,13 @@ export default defineConfig({
                 'script',
                 {
                     defer: 'true',
-                    src: './bugs-script',
+                    src: '/bugs-script',
                 },
             ], [
                 'script',
                 {
                     defer: 'true',
-                    src: './bugs-init',
+                    src: '/bugs-init',
                 },
             ]);
         }
