@@ -12,11 +12,12 @@ According to the official documentation, the minimum requirements for Sentry `24
 
 My tests show that Sentry `24.x` runs on the following _Hetzner VPS_ configurations:
 
-|   vCPU    |  CPU cores  |    RAM    |   SWAP   |
-|:---------:|:-----------:|:---------:|:--------:|
-|  `CPX21`  |     `3`     |  `4 GB`   | `7+ GB`  | 
-|  `CX31`   |     `2`     |  `8 GB`   | `3+ GB`  |
-|  `CPX41`  |     `4`     |  `16 GB`  |          |
+| Provider | Server  | CPU cores |   RAM   |  SWAP   |
+|:--------:|:-------:|:---------:|:-------:|:-------:|
+| Hetzner  | `CPX21` |    `3`    | `4 GB`  | `7+ GB` | 
+| Hetzner  | `CX31`  |    `2`    | `8 GB`  | `3+ GB` |
+| Hetzner  | `CPX41` |    `4`    | `16 GB` |         |
+| Contabo  | `VPS 1` |    `4`    | `6 GB`  | `5+ GB` |
 
 Additional requirements are `Docker Engine` and optionally `reverse proxy`.
 
