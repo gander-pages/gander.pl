@@ -85,5 +85,12 @@ low-volume data - are you sure want to continue? [y/n]: y
 docker compose up -d
 ```
 
+## Side Notes
 
-
+::: details `--no-report-self-hosted-issues`
+Set env variable in file `/etc/environment`:
+```dotenv
+REPORT_SELF_HOSTED_ISSUES=0
+```
+To avoid reporting error and performance data for your Sentry instance.
+:::
