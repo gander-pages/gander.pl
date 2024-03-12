@@ -128,6 +128,12 @@ export default defineConfig({
                 ],
             },
             {
+                text: 'Utils',
+                items: [
+                    {text: 'List', link: '/utils/'}
+                ]
+            },
+            {
                 text: 'Outdated:',
                 items: [
                     {text: 'Debian CheatSheet', link: '/debian-cheatsheet'},
