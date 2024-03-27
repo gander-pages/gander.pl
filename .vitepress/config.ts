@@ -95,6 +95,10 @@ export default defineConfig({
                 text: 'Tools / Projects',
                 items: [
                     {
+                        text: 'Buggregator',
+                        link: '/tools/buggregator'
+                    },
+                    {
                         text: 'Jet Brains: File Watchers',
                         items: [
                             {
