@@ -89,7 +89,7 @@ docker compose up -d
 
 ::: details `--no-report-self-hosted-issues`
 Set env variable in file `/etc/environment`:
-```dotenv
+```txt
 REPORT_SELF_HOSTED_ISSUES=0
 ```
 To avoid reporting error and performance data for your Sentry instance.
