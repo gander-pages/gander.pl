@@ -34,7 +34,7 @@ export default defineConfig({
             ]);
         }
 
-        if (process.env.SENTRY_DSN) {
+        if (process.env.VITE_SENTRY_DSN) {
             scripts.push([
                 'script',
                 {
