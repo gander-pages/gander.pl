@@ -1,5 +1,4 @@
 import {defineConfig, HeadConfig} from 'vitepress';
-import {sentryVitePlugin} from '@sentry/vite-plugin';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
