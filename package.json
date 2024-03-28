@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
+    "build-ci": "node -r dotenv/config ./node_modules/.bin/vitepress build",
     "preview": "vitepress preview",
     "release": "release-it --only-version"
   },
