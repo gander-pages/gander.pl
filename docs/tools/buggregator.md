@@ -57,6 +57,9 @@ VAR_DUMPER_SERVER=buggregator:9912
 `config.yaml`
 
 ```yaml
+parameters:
+    env(MONOLOG_SOCKET_HOST): ''
+
 monolog:
     handlers:
         socket:
