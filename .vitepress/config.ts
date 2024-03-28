@@ -114,15 +114,24 @@ export default defineConfig({
                         link: '/tools/buggregator'
                     },
                     {
-                        text: 'Jet Brains: File Watchers',
+                        text: 'JetBrains',
                         items: [
                             {
-                                text: 'Macro Preview',
-                                link: '/tools/jet-brains/file-watchers/macro-preview',
+                                text: 'PhpStorm: LightEdit',
+                                link: '/tools/jet-brains/php-storm/light-edit'
                             },
                             {
-                                text: 'Using NVM',
-                                link: '/tools/jet-brains/file-watchers/using-nvm',
+                                text: 'File Watchers',
+                                items: [
+                                    {
+                                        text: 'Macro Preview',
+                                        link: '/tools/jet-brains/file-watchers/macro-preview',
+                                    },
+                                    {
+                                        text: 'Using NVM',
+                                        link: '/tools/jet-brains/file-watchers/using-nvm',
+                                    },
+                                ],
                             },
                         ],
                     },
