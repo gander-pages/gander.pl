@@ -8,13 +8,12 @@ const telemetryImg = import.meta.env.VITE_TELEMETRY_IMG;
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .telemetry {
   text-align: center;
-
-  img {
-    display: inline-block;
-    max-width: 66px;
-  }
+}
+.telemetry img {
+  display: inline-block;
+  max-width: 66px;
 }
 </style>
