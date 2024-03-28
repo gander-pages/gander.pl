@@ -86,6 +86,10 @@ export default defineConfig({
                         link: '/solutions/pimcore/workflows',
                     },
                     {
+                        text: 'Tinkerwell Driver',
+                        link: '/solutions/pimcore/tinkerwell-driver',
+                    },
+                    {
                         text: 'ExtJS',
                         link: '/solutions/pimcore/ext-js',
                     },
