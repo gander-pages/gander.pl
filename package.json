@@ -16,7 +16,6 @@
     "release": "release-it --only-version"
   },
   "devDependencies": {
-    "@sentry/vite-plugin": "^2.16.0",
     "@types/bun": "^1.0.11",
     "@types/node": "^20.11.30",
     "release-it": "^17.1.1",
