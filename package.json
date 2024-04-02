@@ -1,25 +1,17 @@
 {
   "name": "gander.pl",
   "private": true,
-  "version": "1.4.0",
   "type": "module",
-  "release-it": {
-    "git": {
-      "requireBranch": "master"
-    }
-  },
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "build-ci": "node -r dotenv/config ./node_modules/.bin/vitepress build",
-    "preview": "vitepress preview",
-    "release": "release-it --only-version"
+    "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@types/bun": "^1.0.11",
-    "@types/node": "^20.11.30",
+    "@types/bun": "^1.0.12",
+    "@types/node": "^20.12.2",
     "dotenv": "^16.4.5",
-    "release-it": "^17.1.1",
-    "vitepress": "^1.0.1"
+    "vitepress": "^1.0.2"
   }
 }
