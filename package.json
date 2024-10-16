@@ -4,10 +4,10 @@
   "type": "module",
   "scripts": {
     "vault": "bunx dotenv-vault@latest",
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "build-ci": "node -r dotenv/config ./node_modules/.bin/vitepress build",
-    "preview": "vitepress preview"
+    "dev": "bun -r dotenv/config ./node_modules/.bin/vitepress dev",
+    "build": "bun -r dotenv/config ./node_modules/.bin/vitepress build",
+    "build-ci": "bun -r dotenv/config ./node_modules/.bin/vitepress build",
+    "preview": "bun -r dotenv/config ./node_modules/.bin/vitepress preview"
   },
   "devDependencies": {
     "@types/bun": "^1.1.11",
