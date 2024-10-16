@@ -1,18 +1,16 @@
 {
   "name": "gander.pl",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "vault": "bunx dotenv-vault@latest",
-    "dev": "bun -r dotenv/config ./node_modules/.bin/vitepress dev",
-    "build": "bun -r dotenv/config ./node_modules/.bin/vitepress build",
-    "build-ci": "bun -r dotenv/config ./node_modules/.bin/vitepress build",
-    "preview": "bun -r dotenv/config ./node_modules/.bin/vitepress preview"
-  },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.19.3",
     "@types/bun": "^1.1.11",
     "@types/node": "^20.16.11",
-    "dotenv": "^16.4.5",
     "vitepress": "^1.4.1"
-  }
+  },
+  "private": true,
+  "scripts": {
+    "dev": "dotenvx run -- vitepress dev",
+    "build": "dotenvx run -- vitepress build",
+    "preview": "dotenvx run -- vitepress preview"
+  },
+  "type": "module"
 }
