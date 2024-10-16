@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "vault": "bunx dotenv-vault@latest",
     "dev": "vitepress dev",
     "build": "vitepress build",
     "build-ci": "node -r dotenv/config ./node_modules/.bin/vitepress build",
