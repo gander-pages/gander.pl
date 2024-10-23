@@ -21,15 +21,13 @@ export default defineConfig({
             ]);
         }
 
-        if (process.env.VITE_TIANJI_ID && process.env.VITE_TIANJI_SRC) {
+        if (process.env.VITE_MEDAMA_SRC) {
             scripts.push([
                 'script',
                 {
-                    'async': 'true',
                     'defer': 'true',
-                    'data-website-id': process.env.VITE_TIANJI_ID,
-                    'src': process.env.VITE_TIANJI_SRC,
-                }
+                    'src': process.env.VITE_MEDAMA_SRC,
+                },
             ]);
         }
 
