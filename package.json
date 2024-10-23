@@ -1,13 +1,14 @@
 {
   "name": "gander.pl",
   "devDependencies": {
-    "@dotenvx/dotenvx": "^1.19.3",
-    "@types/bun": "^1.1.11",
-    "@types/node": "^20.16.11",
+    "@dotenvx/dotenvx": "^1.20.1",
+    "@types/bun": "^1.1.12",
+    "@types/node": "^20.17.0",
     "vitepress": "^1.4.1"
   },
   "private": true,
   "scripts": {
+    "dotenvx": "dotenvx",
     "dev": "dotenvx run -- vitepress dev",
     "build": "dotenvx run -- vitepress build",
     "preview": "dotenvx run -- vitepress preview"
