@@ -7,6 +7,7 @@ export default defineConfig({
     srcDir: 'docs',
     cleanUrls: true,
     ignoreDeadLinks: true,
+    lastUpdated: true,
     async transformHead() {
         const scripts: HeadConfig[] = [];
 
