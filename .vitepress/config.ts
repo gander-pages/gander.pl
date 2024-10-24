@@ -8,6 +8,11 @@ export default defineConfig({
     cleanUrls: true,
     ignoreDeadLinks: true,
     lastUpdated: true,
+
+    sitemap: {
+        hostname: 'https://gander.pl',
+    },
+
     async transformHead() {
         const scripts: HeadConfig[] = [];
 
