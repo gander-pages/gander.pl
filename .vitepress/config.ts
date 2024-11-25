@@ -87,6 +87,12 @@ export default defineConfig({
                     {
                         text: 'Sentry: Install & Backup',
                         link: '/solutions/self-hosted/sentry',
+                        items: [
+                            {
+                                text: 'Feature Flags',
+                                link: '/solutions/self-hosted/sentry/feature-flags'
+                            }
+                        ]
                     },
                     {
                         text: 'Fluentd: Docker Compose',
