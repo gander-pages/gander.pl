@@ -8,16 +8,18 @@ outline: [ 2, 3 ]
 
 ## Requirements
 
-According to the official documentation, the minimum requirements for Sentry `24.x` are `2 CPU cores` / `4 GB RAM`.
+According to the [official documentation](https://develop.sentry.dev/self-hosted/#required-minimum-system-resources), the minimum requirements for Sentry `24.x` are `4 CPU cores` / `16 GB RAM` (Nov 2024), and RAM is more important.
 
-My tests show that Sentry `24.x` runs on the following _Hetzner VPS_ configurations:
+My tests show that Sentry `24.x` runs on the following _VPS_ configurations:
 
-| Provider | Server  | CPU cores |   RAM   |  SWAP   |
-|:--------:|:-------:|:---------:|:-------:|:-------:|
-| Hetzner  | `CPX21` |    `3`    | `4 GB`  | `7+ GB` | 
-| Hetzner  | `CX31`  |    `2`    | `8 GB`  | `3+ GB` |
-| Hetzner  | `CPX41` |    `4`    | `16 GB` |         |
-| Contabo  | `VPS 1` |    `4`    | `6 GB`  | `5+ GB` |
+| Provider | Server  | CPU cores |   RAM   |
+|:--------:|:-------:|:---------:|:-------:|
+| Hetzner  | `CPX41` |    `4`    | `16 GB` |
+| Contabo  | `VPS 2` |    `6`    | `16 GB` |
+
+![cpu](../../assets/img/sentry-cpu.png)
+
+![ram](../../assets/img/sentry-ram.png)
 
 Additional requirements are `Docker Engine` and optionally `reverse proxy`.
 
