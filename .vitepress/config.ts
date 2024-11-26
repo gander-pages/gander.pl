@@ -13,6 +13,12 @@ export default defineConfig({
         hostname: 'https://gander.pl',
     },
 
+    vite: {
+        html: {
+            cspNonce: '{{CSP-NONCE}}',
+        },
+    },
+
     async transformHead() {
         const scripts: HeadConfig[] = [];
 
@@ -37,22 +43,6 @@ export default defineConfig({
             ]);
         }
 
-        if (process.env.SENTRY_DSN) {
-            scripts.push([
-                'script',
-                {
-                    defer: 'true',
-                    src: '/bugs-script',
-                },
-            ], [
-                'script',
-                {
-                    defer: 'true',
-                    src: '/bugs-init',
-                },
-            ]);
-        }
-
         return scripts;
     },
     head: [
@@ -62,12 +52,21 @@ export default defineConfig({
         ['link', {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
         ['link', {rel: 'manifest', href: '/site.webmanifest'}],
     ],
+
+    async transformHtml(code, id, context) {
+        return code
+            .replace(/<script/g, `<script nonce="${context.siteConfig.vite.html.cspNonce}"`)
+            .replace(/<link rel="stylesheet"/g, `<link rel="stylesheet" nonce="${context.siteConfig.vite.html.cspNonce}"`)
+            .replace(/<link rel="manifest"/g, `<link rel="manifest" nonce="${context.siteConfig.vite.html.cspNonce}"`)
+            .replace('</head>', `<meta property="csp-nonce" nonce="${context.siteConfig.vite.html.cspNonce}">\n</head>`);
+    },
+
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         lastUpdated: {
             formatOptions: {
                 dateStyle: 'short',
-            }
+            },
         },
 
         sidebar: [
@@ -90,9 +89,9 @@ export default defineConfig({
                         items: [
                             {
                                 text: 'Feature Flags',
-                                link: '/solutions/self-hosted/sentry/feature-flags'
-                            }
-                        ]
+                                link: '/solutions/self-hosted/sentry/feature-flags',
+                            },
+                        ],
                     },
                     {
                         text: 'Fluentd: Docker Compose',
@@ -126,14 +125,14 @@ export default defineConfig({
                 items: [
                     {
                         text: 'Buggregator',
-                        link: '/tools/buggregator'
+                        link: '/tools/buggregator',
                     },
                     {
                         text: 'JetBrains',
                         items: [
                             {
                                 text: 'PhpStorm: LightEdit',
-                                link: '/tools/jet-brains/php-storm/light-edit'
+                                link: '/tools/jet-brains/php-storm/light-edit',
                             },
                             {
                                 text: 'File Watchers',
@@ -173,8 +172,8 @@ export default defineConfig({
             {
                 text: 'Utils',
                 items: [
-                    {text: 'List', link: '/utils/'}
-                ]
+                    {text: 'List', link: '/utils/'},
+                ],
             },
             {
                 text: 'Outdated:',
