@@ -58,7 +58,7 @@ export default defineConfig({
             .replace(/<script/g, `<script nonce="${context.siteConfig.vite.html.cspNonce}"`)
             .replace(/<link rel="stylesheet"/g, `<link rel="stylesheet" nonce="${context.siteConfig.vite.html.cspNonce}"`)
             .replace(/<link rel="manifest"/g, `<link rel="manifest" nonce="${context.siteConfig.vite.html.cspNonce}"`)
-            .replace('</head>', `<meta property="csp-nonce" nonce="${context.siteConfig.vite.html.cspNonce}">\n</head>`);
+            .replace('<head>', `<head>\n<meta property="csp-nonce" nonce="${context.siteConfig.vite.html.cspNonce}">\n`);
     },
 
     themeConfig: {
