@@ -19,8 +19,8 @@ export default  {
                         blockAllMedia: false,
                     }),
                 ],
-                replaysSessionSampleRate: 1.0,
-                replaysOnErrorSampleRate: 1.0,
+                replaysSessionSampleRate: 0,
+                replaysOnErrorSampleRate: 0.1,
                 dist: import.meta.env.VITE_COMMIT_SHA,
             });
         }
