@@ -9,7 +9,11 @@ description: |
 When working with CI/CD, especially during intensive testing or development, a GitHub repository can quickly fill up with failed workflows (runs) that make navigation difficult and can consume resources. GitHub CLI (`gh`) allows you to automate the process of removing them.
 
 ```shell
-gh run list -s failure --all --json databaseId --jq '.[].databaseId' | xargs -I{} gh run delete {}
+gh run list \
+  --status failure \
+  --all \
+  --json databaseId \
+  --jq '.[].databaseId' | xargs -I{} gh run delete {}
 ```
 
 ## Detailed Explanation of Each Argument and Command
@@ -21,16 +25,22 @@ Lists workflows (runs) in the repository:
 - **`gh`** — this is GitHub CLI, a tool for managing GitHub from the terminal.
 - **`run list`** — displays a list of GitHub Actions workflow runs.
 
+📖 **Documentation**: [gh run list manual](https://cli.github.com/manual/gh_run_list)
+
 #### Arguments:
 
-- **`-s failure`**
-    - Filters only those runs that ended in failure.
+- **`--status failure`**
+    - Filters runs by their completion status. The `failure` value specifically targets runs that ended in failure.
+    - Alternative values: `queued`, `completed`, `in_progress`, `requested`, `waiting`, `pending`
 - **`--all`**
-    - Shows all runs, without limiting to the last 30.
+    - Include disabled workflows and show all runs without the default limit (normally limited to 20 most recent runs).
+    - Without this flag, only active workflows and recent runs are displayed.
 - **`--json databaseId`**
-    - Retrieves data in JSON format, narrowing to the `databaseId` field for each workflow run.
+    - Output results in JSON format, including only the `databaseId` field for each workflow run.
+    - The `databaseId` is the unique identifier needed for deletion operations.
 - **`--jq '.[].databaseId'`**
-    - Processes the JSON result, outputting only the identifiers (`databaseId`) of each failed workflow (each run).
+    - Apply jq filter to extract only the `databaseId` values from the JSON output.
+    - This transforms the JSON array into a simple list of IDs, one per line.
 
 ### 2. `| xargs -I{} gh run delete {}`
 
@@ -42,9 +52,11 @@ Processes subsequent steps in bash (pipe):
 - **`gh run delete {}`**
     - Deletes the workflow run with the given `databaseId` from the GitHub repository.
 
+📖 **Documentation**: [xargs manual](https://man7.org/linux/man-pages/man1/xargs.1.html)
+
 ## How It Works — Step by Step
 
-1. `gh run list -s failure --all --json databaseId --jq '.[].databaseId'`  
+1. `gh run list --status failure --all --json databaseId --jq '.[].databaseId'`  
    Displays a list of identifiers for all failed workflows in the repository.
 
 2. The result of these identifiers (each on a new line) is passed through the pipe `|` to `xargs`.
