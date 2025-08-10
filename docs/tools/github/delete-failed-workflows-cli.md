@@ -18,14 +18,18 @@ gh run list \
 
 ## Detailed Explanation of Each Argument and Command
 
+📖 **Command Documentation**:
+- [gh run list](https://cli.github.com/manual/gh_run_list) - GitHub CLI run list command
+- [gh run delete](https://cli.github.com/manual/gh_run_delete) - GitHub CLI run delete command
+- [xargs](https://man7.org/linux/man-pages/man1/xargs.1.html) - Execute commands from standard input
+- [jq](https://jqlang.github.io/jq/manual/) - JSON processor
+
 ### 1. `gh run list`
 
 Lists workflows (runs) in the repository:
 
 - **`gh`** — this is GitHub CLI, a tool for managing GitHub from the terminal.
 - **`run list`** — displays a list of GitHub Actions workflow runs.
-
-📖 **Documentation**: [gh run list manual](https://cli.github.com/manual/gh_run_list)
 
 #### Arguments:
 
@@ -51,8 +55,6 @@ Processes subsequent steps in bash (pipe):
 - **`-I{}`** — specifies that `{}` will be replaced by the value of each line (each ID).
 - **`gh run delete {}`**
     - Deletes the workflow run with the given `databaseId` from the GitHub repository.
-
-📖 **Documentation**: [xargs manual](https://man7.org/linux/man-pages/man1/xargs.1.html)
 
 ## How It Works — Step by Step
 
