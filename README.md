@@ -1,6 +1,6 @@
 # 🦆 Gander Site - Technical Documentation Site
 
-A VitePress-based documentation site featuring technical articles, code solutions, and development guides. Built with modern web technologies and deployed as a static site.
+A [VitePress](https://vitepress.dev/)-based documentation site featuring technical articles, code solutions, and development guides. Built with modern web technologies and deployed as a static site.
 
 ## 🚀 Quick Start
 
@@ -47,19 +47,19 @@ docs/
 └── public/                 # Public assets (favicons, manifests)
 
 .vitepress/
-├── config.ts              # Main VitePress configuration
+├── config.ts              # Main [VitePress](https://vitepress.dev/) configuration
 └── functions/
-    └── _middleware.js     # Cloudflare Functions middleware
+    └── _middleware.js     # [Cloudflare](https://www.cloudflare.com/) Functions middleware
 ```
 
 ## 🛠️ Technology Stack
 
-- **Static Site Generator**: VitePress
-- **Environment Management**: dotenvx
-- **Deployment**: Cloudflare Pages
-- **Analytics**: Umami & Medama integration
+- **Static Site Generator**: [VitePress](https://vitepress.dev/)
+- **Environment Management**: [dotenvx](https://dotenvx.com/)
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
+- **Analytics**: [Umami](https://umami.is/) & [Medama](https://medama.io/) integration
 - **Security**: Content Security Policy with nonce-based loading
-- **Language**: TypeScript configuration
+- **Language**: [TypeScript](https://www.typescriptlang.org/) configuration
 
 ## 📚 Content Categories
 
@@ -94,7 +94,7 @@ Legacy content maintained for reference
 - ✅ Hierarchical navigation structure
 - ✅ Deep outline navigation for better accessibility
 - ✅ Mobile-responsive design
-- ✅ Analytics integration (Umami, Medama)
+- ✅ Analytics integration ([Umami](https://umami.is/), [Medama](https://medama.io/))
 - ✅ SEO optimized
 - ✅ Security-first approach with CSP
 - ✅ Environment-based configuration
@@ -103,10 +103,10 @@ Legacy content maintained for reference
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start VitePress dev server with environment variables |
+| `npm run dev` | Start [VitePress](https://vitepress.dev/) dev server with environment variables |
 | `npm run build` | Build the static site for production |
 | `npm run preview` | Serve the built site locally for testing |
-| `npm run dotenvx` | Access dotenvx commands for environment management |
+| `npm run dotenvx` | Access [dotenvx](https://dotenvx.com/) commands for environment management |
 
 ## 🤝 Contributing
 
