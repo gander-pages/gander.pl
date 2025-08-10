@@ -37,19 +37,19 @@ bun run preview
 ```
 docs/
 ├── index.md                 # Homepage
-├── solutions/              # Organized solutions
+├── solutions/               # Organized solutions
 │   ├── pimcore/            # Pimcore CMS solutions
 │   ├── self-hosted/        # Self-hosting guides
 │   └── services/           # External service integrations
-├── tools/                  # Development tools & utilities
-├── utils/                  # General utilities
-├── assets/                 # Images and static assets
-└── public/                 # Public assets (favicons, manifests)
+├── tools/                   # Development tools & utilities
+├── utils/                   # General utilities
+├── assets/                  # Images and static assets
+└── public/                  # Public assets (favicons, manifests)
 
 .vitepress/
-├── config.ts              # Main [VitePress](https://vitepress.dev/) configuration
+├── config.ts                # Main VitePress configuration
 └── functions/
-    └── _middleware.js     # [Cloudflare](https://www.cloudflare.com/) Functions middleware
+    └── _middleware.js       # Cloudflare Functions middleware
 ```
 
 ## 🛠️ Technology Stack
