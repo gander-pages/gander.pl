@@ -26,21 +26,21 @@ The site is built with modern web technologies, deployed as a static site on Clo
 
 ## Prerequisites and Setup
 
-- **Node.js**: v18+ recommended
-- **Package Manager**: npm or yarn
-- **Installation**: Run `npm install` to install dependencies
+- **Runtime**: [Bun](https://bun.sh/) v1.0+ recommended (primary)
+- **Alternative**: [Node.js](https://nodejs.org/) v18+ with npm or yarn
+- **Installation**: Run `bun install` to install dependencies
 - **Environment**: Uses dotenvx for environment variable management
 
 ## Build System and Commands
 
-This project uses VitePress with dotenvx for environment management:
+This project uses [VitePress](https://vitepress.dev/) with [Bun](https://bun.sh/) and [dotenvx](https://dotenvx.com/) for environment management:
 
-- **Development server**: `npm run dev` - Starts VitePress dev server with environment variables
-- **Build for production**: `npm run build` - Builds the static site for deployment
-- **Preview build**: `npm run preview` - Serves the built site locally for testing
-- **Environment management**: `npm run dotenvx` - Access to dotenvx commands for environment variable management
+- **Development server**: `bun run dev` - Starts VitePress dev server with environment variables
+- **Build for production**: `bun run build` - Builds the static site for deployment
+- **Preview build**: `bun run preview` - Serves the built site locally for testing
+- **Environment management**: `bun run dotenvx` - Access to dotenvx commands for environment variable management
 
-All commands are prefixed with `dotenvx run --` to load environment variables from `.env` files.
+All commands use Bun as the primary runtime and are prefixed with `dotenvx run --` to load environment variables from `.env` files.
 
 ## Architecture and Structure
 

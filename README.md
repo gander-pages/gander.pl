@@ -6,30 +6,30 @@ A [VitePress](https://vitepress.dev/)-based documentation site featuring technic
 
 ### Prerequisites
 
-- Node.js (v18+ recommended)
-- npm or yarn
+- [Bun](https://bun.sh/) (v1.0+ recommended)
+- Alternative: [Node.js](https://nodejs.org/) (v18+ recommended) with npm or yarn
 
 ### Installation
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development
 
 ```bash
 # Start development server with environment variables
-npm run dev
+bun run dev
 ```
 
 ### Build & Deploy
 
 ```bash
 # Build for production
-npm run build
+bun run build
 
 # Preview production build
-npm run preview
+bun run preview
 ```
 
 ## 📁 Project Structure
@@ -103,10 +103,10 @@ Legacy content maintained for reference
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start [VitePress](https://vitepress.dev/) dev server with environment variables |
-| `npm run build` | Build the static site for production |
-| `npm run preview` | Serve the built site locally for testing |
-| `npm run dotenvx` | Access [dotenvx](https://dotenvx.com/) commands for environment management |
+| `bun run dev` | Start [VitePress](https://vitepress.dev/) dev server with environment variables |
+| `bun run build` | Build the static site for production |
+| `bun run preview` | Serve the built site locally for testing |
+| `bun run dotenvx` | Access [dotenvx](https://dotenvx.com/) commands for environment management |
 
 ## 🤝 Contributing
 
