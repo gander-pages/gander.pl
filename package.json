@@ -1,11 +1,11 @@
 {
   "name": "gander.pl",
   "devDependencies": {
-    "@dotenvx/dotenvx": "^1.33.0",
-    "@sentry/vue": "^8.51.0",
-    "@types/bun": "^1.2.0",
-    "@types/node": "^22.10.10",
-    "vitepress": "^1.6.3"
+    "@dotenvx/dotenvx": "^1.48.4",
+    "@sentry/vue": "^10.3.0",
+    "@types/bun": "^1.2.19",
+    "@types/node": "^24.2.1",
+    "vitepress": "^1.6.4"
   },
   "private": true,
   "scripts": {
