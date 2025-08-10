@@ -234,7 +234,7 @@ export default defineConfig({
         ],
 
         editLink: {
-            pattern: 'https://github.com/gander/gander.pl/edit/master/docs/:path',
+            pattern: 'https://github.com/gander-pages/gander.pl/edit/master/docs/:path',
         },
 
         outline: 'deep',
