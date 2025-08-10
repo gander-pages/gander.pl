@@ -150,6 +150,15 @@ export default defineConfig({
                         ],
                     },
                     {
+                        text: 'GitHub',
+                        items: [
+                            {
+                                text: 'Remove failed workflows',
+                                link: '/tools/github/delete-failed-workflows-cli',
+                            },
+                        ],
+                    },
+                    {
                         text: 'Open Street Map',
                         items: [
                             {
