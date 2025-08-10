@@ -12,6 +12,7 @@ When working with CI/CD, especially during intensive testing or development, a G
 gh run list \
   --status failure \
   --all \
+  --limit 200 \
   --json databaseId \
   --jq '.[].databaseId' | xargs -I{} gh run delete {}
 ```
@@ -37,8 +38,12 @@ Lists workflows (runs) in the repository:
     - Filters runs by their completion status. The `failure` value specifically targets runs that ended in failure.
     - Alternative values: `queued`, `completed`, `in_progress`, `requested`, `waiting`, `pending`
 - **`--all`**
-    - Include disabled workflows and show all runs without the default limit (normally limited to 20 most recent runs).
+    - Include disabled workflows.
     - Without this flag, only active workflows and recent runs are displayed.
+- **`--limit 200`**
+    - Sets the maximum number of workflow runs to retrieve (default is 20).
+    - Using 200 allows processing more failed runs in a single command execution.
+    - Can be adjusted based on repository size and cleanup needs.
 - **`--json databaseId`**
     - Output results in JSON format, including only the `databaseId` field for each workflow run.
     - The `databaseId` is the unique identifier needed for deletion operations.
@@ -58,8 +63,8 @@ Processes subsequent steps in bash (pipe):
 
 ## How It Works — Step by Step
 
-1. `gh run list --status failure --all --json databaseId --jq '.[].databaseId'`  
-   Displays a list of identifiers for all failed workflows in the repository.
+1. `gh run list --status failure --all --limit 200 --json databaseId --jq '.[].databaseId'`  
+   Displays a list of identifiers for up to 200 failed workflows in the repository.
 
 2. The result of these identifiers (each on a new line) is passed through the pipe `|` to `xargs`.
 
