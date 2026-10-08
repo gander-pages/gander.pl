@@ -57,11 +57,14 @@ This project uses [VitePress](https://vitepress.dev/):
 
 ### Cloudflare Workers
 - **wrangler.jsonc**: Worker config (`gander-pl`, static assets from `.vitepress/dist`, Worker runs first). Deploys are triggered by pushes to the Cloudflare-connected repo (Workers Builds, deploy command `npx wrangler deploy`), not manually.
+- **CSP reports**: `POST /csp-report` (handled in `worker/index.js`) stores violations in the D1 database bound as `CSP_DB`, one deduplicated row per directive/blocked origin/page with a counter. The binding has no ID; Wrangler provisions the database on deploy. Inspect with `npx wrangler d1 execute CSP_DB --remote --command "SELECT * FROM csp_reports ORDER BY count DESC"`.
+- **Worker routing**: `run_worker_first` limits the Worker to pages and `/csp-report`; `/assets/*` and files with an extension are free static requests.
 - **Build command**: `npm ci && npm run build`; Node version comes from `.nvmrc` / `NODE_VERSION`.
 - **renovate.json**: majors are separate PRs without automerge; Node, `@types/node` and `vitepress` are pinned to their current major.
 
 ### Middleware
 - **worker/index.js**: Cloudflare Worker that wraps the static assets and:
+  - Receives CSP violation reports at `/csp-report`
   - Generates CSP nonces for security
   - Sets security headers including CSP reporting
   - Replaces nonce placeholders in HTML output
