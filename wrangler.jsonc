@@ -14,13 +14,9 @@
 			"!/*.*"
 		]
 	},
-	// No IDs on purpose: Wrangler provisions the database on deploy.
 	"d1_databases": [
 		{
-			"binding": "CSP_DB"
-		},
-		{
-			"binding": "csp_reports",
+			"binding": "CSP_DB",
 			"database_name": "csp-reports",
 			"database_id": "800e1f15-e79f-451f-82fb-0a728679cc03"
 		}
