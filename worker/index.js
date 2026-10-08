@@ -1,10 +1,12 @@
 const REPORT_PATH = '/csp-report';
 const MAX_BODY_BYTES = 8 * 1024;
 const MAX_FIELD_LENGTH = 200;
+// Unauthenticated endpoint: cap distinct rows so spoofed reports cannot grow the table or burn the D1 write quota forever.
+const MAX_ROWS = 500;
 
 // ponytail: schema is created lazily on the first report, move to wrangler d1 migrations if it ever evolves
 const SCHEMA = 'CREATE TABLE IF NOT EXISTS csp_reports (directive TEXT NOT NULL, blocked TEXT NOT NULL, document TEXT NOT NULL, count INTEGER NOT NULL DEFAULT 1, first_seen TEXT NOT NULL, last_seen TEXT NOT NULL, user_agent TEXT, PRIMARY KEY (directive, blocked, document))';
-const UPSERT = "INSERT INTO csp_reports (directive, blocked, document, first_seen, last_seen, user_agent) VALUES (?1, ?2, ?3, datetime('now'), datetime('now'), ?4) ON CONFLICT DO UPDATE SET count = count + 1, last_seen = datetime('now')";
+const UPSERT = `INSERT INTO csp_reports (directive, blocked, document, first_seen, last_seen, user_agent) SELECT ?1, ?2, ?3, datetime('now'), datetime('now'), ?4 WHERE EXISTS (SELECT 1 FROM csp_reports WHERE directive = ?1 AND blocked = ?2 AND document = ?3) OR (SELECT COUNT(*) FROM csp_reports) < ${MAX_ROWS} ON CONFLICT DO UPDATE SET count = count + 1, last_seen = datetime('now')`;
 
 let schemaReady;
 
@@ -55,8 +57,8 @@ async function handleReport(request, env, ctx) {
         return new Response(null, {status: 415});
     }
 
-    const raw = await request.text();
-    if (raw.length > MAX_BODY_BYTES) {
+    const raw = await readLimited(request, MAX_BODY_BYTES);
+    if (raw === null) {
         return new Response(null, {status: 413});
     }
 
@@ -77,6 +79,33 @@ async function handleReport(request, env, ctx) {
     return new Response(null, {status: 204});
 }
 
+// Reads the body without buffering more than `max` bytes; returns null when it is larger.
+async function readLimited(request, max) {
+    if (Number(request.headers.get('Content-Length')) > max) {
+        return null;
+    }
+
+    const chunks = [];
+    let total = 0;
+    const reader = request.body?.getReader();
+
+    while (reader) {
+        const {done, value} = await reader.read();
+        if (done) {
+            break;
+        }
+
+        total += value.length;
+        if (total > max) {
+            await reader.cancel();
+            return null;
+        }
+        chunks.push(value);
+    }
+
+    return new Blob(chunks).text();
+}
+
 // Handles both the legacy `report-uri` body ({"csp-report": {...}}) and the Reporting API body ([{type, body}, ...]).
 function extractViolations(payload) {
     const items = Array.isArray(payload)
@@ -95,7 +124,7 @@ function extractViolations(payload) {
 
         return [{
             host: documentUrl.host,
-            directive: clamp(String(directive).split(' ')[0]),
+            directive: clamp(String(directive).split(' ')[0].replace(/[^a-z-]/gi, '') || 'unknown'),
             // Query strings and fragments are dropped so every distinct violation maps to one row.
             blocked: clamp(blockedUrl && blockedUrl.protocol.startsWith('http') ? blockedUrl.origin : String(blocked) || 'inline'),
             document: clamp(documentUrl.pathname),
