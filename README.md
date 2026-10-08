@@ -48,7 +48,7 @@ docs/
 .vitepress/
 ├── config.ts                # Main VitePress configuration
 worker/
-└── index.js                 # Cloudflare Worker (CSP nonce middleware)
+└── index.js                 # Cloudflare Worker (CSP nonce middleware, CSP report collector)
 ```
 
 ## 🛠️ Technology Stack
