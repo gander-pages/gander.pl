@@ -1,12 +1,14 @@
 const REPORT_PATH = '/csp-report';
 const MAX_BODY_BYTES = 8 * 1024;
 const MAX_FIELD_LENGTH = 200;
-// Unauthenticated endpoint: cap distinct rows so spoofed reports cannot grow the table or burn the D1 write quota forever.
+// Unauthenticated endpoint: cap distinct rows so spoofed reports cannot grow the table forever. At the cap the
+// least-reported, oldest row is evicted, so one-off junk drops out while real repeating violations stay.
 const MAX_ROWS = 500;
 
 // ponytail: schema is created lazily on the first report, move to wrangler d1 migrations if it ever evolves
 const SCHEMA = 'CREATE TABLE IF NOT EXISTS csp_reports (directive TEXT NOT NULL, blocked TEXT NOT NULL, document TEXT NOT NULL, count INTEGER NOT NULL DEFAULT 1, first_seen TEXT NOT NULL, last_seen TEXT NOT NULL, user_agent TEXT, PRIMARY KEY (directive, blocked, document))';
-const UPSERT = `INSERT INTO csp_reports (directive, blocked, document, first_seen, last_seen, user_agent) SELECT ?1, ?2, ?3, datetime('now'), datetime('now'), ?4 WHERE EXISTS (SELECT 1 FROM csp_reports WHERE directive = ?1 AND blocked = ?2 AND document = ?3) OR (SELECT COUNT(*) FROM csp_reports) < ${MAX_ROWS} ON CONFLICT DO UPDATE SET count = count + 1, last_seen = datetime('now')`;
+const EVICT = `DELETE FROM csp_reports WHERE rowid IN (SELECT rowid FROM csp_reports ORDER BY count, last_seen LIMIT 1) AND (SELECT COUNT(*) FROM csp_reports) >= ${MAX_ROWS} AND NOT EXISTS (SELECT 1 FROM csp_reports WHERE directive = ?1 AND blocked = ?2 AND document = ?3)`;
+const UPSERT = "INSERT INTO csp_reports (directive, blocked, document, first_seen, last_seen, user_agent) VALUES (?1, ?2, ?3, datetime('now'), datetime('now'), ?4) ON CONFLICT DO UPDATE SET count = count + 1, last_seen = datetime('now')";
 
 let schemaReady;
 
@@ -140,7 +142,10 @@ async function store(db, rows, userAgent) {
     try {
         schemaReady ??= db.exec(SCHEMA);
         await schemaReady;
-        await db.batch(rows.map((v) => db.prepare(UPSERT).bind(v.directive, v.blocked, v.document, userAgent)));
+        await db.batch(rows.flatMap((v) => [
+            db.prepare(EVICT).bind(v.directive, v.blocked, v.document),
+            db.prepare(UPSERT).bind(v.directive, v.blocked, v.document, userAgent),
+        ]));
     } catch (error) {
         schemaReady = undefined;
         console.error('Failed to store CSP report', error);
