@@ -58,6 +58,7 @@ This project uses [VitePress](https://vitepress.dev/):
 ### Cloudflare Workers
 - **wrangler.jsonc**: Worker config (`gander-pl`, static assets from `.vitepress/dist`, Worker runs first). Deploys are triggered by pushes to the Cloudflare-connected repo (Workers Builds, deploy command `npx wrangler deploy`), not manually.
 - **CSP reports**: `POST /csp-report` (handled in `worker/index.js`) stores violations in the D1 database bound as `CSP_DB`, one deduplicated row per directive/blocked origin/page with a counter. The database `csp-reports` was created once with `wrangler d1 create`; the table is created lazily on the first report. Inspect with `npx wrangler d1 execute CSP_DB --remote --command "SELECT * FROM csp_reports ORDER BY count DESC"`.
+- **CSP reports are untrusted**: `/csp-report` is public and unauthenticated (browsers cannot send a secret), so anyone can inflate counters or push real rows out of the 500-row cap. Treat `csp_reports` as a hint to investigate, not as an audit log. Add a Cloudflare WAF rate limiting rule on `/csp-report` (dashboard, not in the repo) to limit abuse and D1 write usage.
 - **Worker routing**: `run_worker_first` limits the Worker to pages and `/csp-report`; `/assets/*` and files with an extension are free static requests.
 - **Build command**: `npm ci && npm run build`; Node version comes from `.nvmrc` / `NODE_VERSION`.
 - **renovate.json**: majors are separate PRs without automerge; Node, `@types/node` and `vitepress` are pinned to their current major.
