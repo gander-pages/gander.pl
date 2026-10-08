@@ -17,7 +17,6 @@ The site is built with modern web technologies, deployed as a static site on Clo
 ## Technology Stack
 
 - **Static Site Generator**: VitePress for fast, modern documentation sites
-- **Environment Management**: dotenvx for secure environment variable handling
 - **Deployment Platform**: Cloudflare Pages for global CDN and edge functions
 - **Analytics**: Dual integration with Umami and Medama analytics platforms
 - **Security**: Content Security Policy with nonce-based loading
@@ -26,21 +25,16 @@ The site is built with modern web technologies, deployed as a static site on Clo
 
 ## Prerequisites and Setup
 
-- **Runtime**: [Bun](https://bun.sh/) v1.0+ recommended (primary)
-- **Alternative**: [Node.js](https://nodejs.org/) v18+ with npm or yarn
-- **Installation**: Run `bun install` to install dependencies
-- **Environment**: Uses dotenvx for environment variable management
+- **Runtime**: [Node.js](https://nodejs.org/) v22 (see `.nvmrc`)
+- **Installation**: Run `npm ci` to install dependencies
 
 ## Build System and Commands
 
-This project uses [VitePress](https://vitepress.dev/) with [Bun](https://bun.sh/) and [dotenvx](https://dotenvx.com/) for environment management:
+This project uses [VitePress](https://vitepress.dev/):
 
-- **Development server**: `bun run dev` - Starts VitePress dev server with environment variables
-- **Build for production**: `bun run build` - Builds the static site for deployment
-- **Preview build**: `bun run preview` - Serves the built site locally for testing
-- **Environment management**: `bun run dotenvx` - Access to dotenvx commands for environment variable management
-
-All commands use Bun as the primary runtime and are prefixed with `dotenvx run --` to load environment variables from `.env` files.
+- **Development server**: `npm run dev` - Starts VitePress dev server
+- **Build for production**: `npm run build` - Builds the static site for deployment
+- **Preview build**: `npm run preview` - Serves the built site locally for testing
 
 ## Architecture and Structure
 
@@ -60,6 +54,11 @@ All commands use Bun as the primary runtime and are prefixed with `dotenvx run -
   - Analytics integration (Umami, Medama)
   - CSP (Content Security Policy) implementation
   - Custom head transformations for nonce injection
+
+### Cloudflare Pages
+- **wrangler.jsonc**: Pages project config (`gander-pl`, output `.vitepress/dist`). Deploys are triggered by pushes to the Cloudflare-connected repo, not manually.
+- **Build command**: `npm ci && npm run build`; Node version comes from `.nvmrc` / `NODE_VERSION`.
+- **renovate.json**: majors are separate PRs without automerge; Node, `@types/node` and `vitepress` are pinned to their current major.
 
 ### Middleware
 - **functions/_middleware.js**: Cloudflare Functions middleware that:
@@ -109,7 +108,7 @@ The project implements strict Content Security Policy with:
 ### Deployment and Maintenance
 - **Build Process**: Production builds are optimized for static hosting
 - **Preview Testing**: Use `npm run preview` to test builds locally before deployment
-- **Environment Variables**: All external integrations use environment variables for configuration
+- **Environment Variables**: All external integrations use environment variables for configuration, set in the Cloudflare Pages dashboard (there is no `.env` file in the repo)
 - **Content Updates**: Markdown files can be edited directly, changes are reflected after rebuild
 - **Security Monitoring**: CSP violations are reported to external endpoint for monitoring
 - **Analytics**: Both Umami and Medama analytics provide usage insights

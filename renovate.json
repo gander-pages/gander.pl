@@ -10,7 +10,7 @@
             "matchUpdateTypes": ["major"],
             "automerge": false,
             "labels": ["major-update"],
-            "prBodyNotes": ["Major bump: read the changelog, check the Cloudflare Pages build and the versions in .nvmrc and BUN_VERSION."]
+            "prBodyNotes": ["Major bump: read the changelog, check the Cloudflare Pages build and the versions in .nvmrc."]
         },
         {
             "description": "Node (.nvmrc): major bumps are manual only, together with NODE_VERSION in Cloudflare Pages.",

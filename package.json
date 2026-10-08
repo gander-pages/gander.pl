@@ -1,18 +1,20 @@
 {
   "name": "gander.pl",
   "devDependencies": {
-    "@dotenvx/dotenvx": "^1.48.4",
     "@sentry/vue": "^10.3.0",
-    "@types/bun": "^1.2.19",
-    "@types/node": "^24.2.1",
-    "vitepress": "^1.6.4"
+    "@types/node": "^22.18.0",
+    "vitepress": "^1.6.4",
+    "wrangler": "^4.148.0"
   },
   "private": true,
+  "packageManager": "npm@10.9.9",
+  "engines": {
+    "node": ">=22 <23"
+  },
   "scripts": {
-    "dotenvx": "dotenvx",
-    "dev": "dotenvx run -- vitepress dev",
-    "build": "dotenvx run -- vitepress build",
-    "preview": "dotenvx run -- vitepress preview"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "type": "module"
 }
