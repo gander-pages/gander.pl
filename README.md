@@ -6,30 +6,29 @@ A [VitePress](https://vitepress.dev/)-based documentation site featuring technic
 
 ### Prerequisites
 
-- [Bun](https://bun.sh/) (v1.0+ recommended)
-- Alternative: [Node.js](https://nodejs.org/) (v18+ recommended) with npm or yarn
+- [Node.js](https://nodejs.org/) v22 (see `.nvmrc`) with [npm](https://docs.npmjs.com/cli/v10/commands/npm)
 
 ### Installation
 
 ```bash
-bun install
+npm ci
 ```
 
 ### Development
 
 ```bash
-# Start development server with environment variables
-bun run dev
+# Start development server
+npm run dev
 ```
 
 ### Build & Deploy
 
 ```bash
 # Build for production
-bun run build
+npm run build
 
 # Preview production build
-bun run preview
+npm run preview
 ```
 
 ## 📁 Project Structure
@@ -55,7 +54,6 @@ docs/
 ## 🛠️ Technology Stack
 
 - **Static Site Generator**: [VitePress](https://vitepress.dev/)
-- **Environment Management**: [dotenvx](https://dotenvx.com/)
 - **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
 - **Analytics**: [Umami](https://umami.is/) & [Medama](https://medama.io/) integration
 - **Security**: Content Security Policy with nonce-based loading
@@ -103,10 +101,9 @@ Legacy content maintained for reference
 
 | Command | Description |
 |---------|-------------|
-| `bun run dev` | Start [VitePress](https://vitepress.dev/) dev server with environment variables |
-| `bun run build` | Build the static site for production |
-| `bun run preview` | Serve the built site locally for testing |
-| `bun run dotenvx` | Access [dotenvx](https://dotenvx.com/) commands for environment management |
+| `npm run dev` | Start [VitePress](https://vitepress.dev/) dev server |
+| `npm run build` | Build the static site for production |
+| `npm run preview` | Serve the built site locally for testing |
 
 ## 🤝 Contributing
 
