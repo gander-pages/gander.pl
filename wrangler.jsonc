@@ -7,19 +7,12 @@
 		"directory": ".vitepress/dist",
 		"binding": "ASSETS",
 		"not_found_handling": "404-page",
-		// Run the Worker only for pages and the report endpoint; /assets/* and files with an extension stay free static requests.
+		// Run the Worker only for pages (CSP nonce); /assets/* and files with an extension stay free static requests.
 		"run_worker_first": [
 			"/*",
 			"!/assets/*",
 			"!/*.*"
 		]
 	},
-	"d1_databases": [
-		{
-			"binding": "CSP_DB",
-			"database_name": "csp-reports",
-			"database_id": "800e1f15-e79f-451f-82fb-0a728679cc03"
-		}
-	],
 	"previews": {}
 }
