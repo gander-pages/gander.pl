@@ -1,12 +1,14 @@
-export async function onRequest(context) {
-    const response = await context.next();
+export default {
+    async fetch(request, env) {
+        const response = await env.ASSETS.fetch(request);
 
-    if (response.headers.get("Content-Type")?.includes("text/html")) {
-        return await handleNonceResponse(response);
-    }
+        if (response.headers.get("Content-Type")?.includes("text/html")) {
+            return await handleNonceResponse(response);
+        }
 
-    return response;
-}
+        return response;
+    },
+};
 
 async function handleNonceResponse(response) {
     const nonce = generateNonce();
@@ -23,9 +25,8 @@ async function handleNonceResponse(response) {
         status: response.status,
         statusText: response.statusText,
     });
-
 }
 
 function generateNonce() {
-    return Date.now().toString(36) + Math.random().toString(36).substring(2);
+    return crypto.randomUUID();
 }

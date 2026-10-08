@@ -47,14 +47,14 @@ docs/
 
 .vitepress/
 ├── config.ts                # Main VitePress configuration
-└── functions/
-    └── _middleware.js       # Cloudflare Functions middleware
+worker/
+└── index.js                 # Cloudflare Worker (CSP nonce middleware)
 ```
 
 ## 🛠️ Technology Stack
 
 - **Static Site Generator**: [VitePress](https://vitepress.dev/)
-- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
+- **Deployment**: [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/)
 - **Analytics**: [Umami](https://umami.is/) & [Medama](https://medama.io/) integration
 - **Security**: Content Security Policy with nonce-based loading
 - **Language**: [TypeScript](https://www.typescriptlang.org/) configuration

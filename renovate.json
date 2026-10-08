@@ -10,10 +10,10 @@
             "matchUpdateTypes": ["major"],
             "automerge": false,
             "labels": ["major-update"],
-            "prBodyNotes": ["Major bump: read the changelog, check the Cloudflare Pages build and the versions in .nvmrc."]
+            "prBodyNotes": ["Major bump: read the changelog, check the Cloudflare build and the versions in .nvmrc."]
         },
         {
-            "description": "Node (.nvmrc): major bumps are manual only, together with NODE_VERSION in Cloudflare Pages.",
+            "description": "Node (.nvmrc): major bumps are manual only, together with NODE_VERSION in Cloudflare.",
             "matchDepNames": ["node"],
             "matchUpdateTypes": ["major"],
             "enabled": false
