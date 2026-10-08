@@ -1,0 +1,32 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["github>gander-settings/renovate:automerge"],
+    "separateMajorMinor": true,
+    "separateMultipleMajor": true,
+    "minimumReleaseAge": "7 days",
+    "packageRules": [
+        {
+            "description": "Major: separate PR per major version, no automerge.",
+            "matchUpdateTypes": ["major"],
+            "automerge": false,
+            "labels": ["major-update"],
+            "prBodyNotes": ["Major bump: read the changelog, check the Cloudflare Pages build and the versions in .nvmrc and BUN_VERSION."]
+        },
+        {
+            "description": "Node (.nvmrc): major bumps are manual only, together with NODE_VERSION in Cloudflare Pages.",
+            "matchDepNames": ["node"],
+            "matchUpdateTypes": ["major"],
+            "enabled": false
+        },
+        {
+            "description": "@types/node: keep in line with the runtime from .nvmrc (22). Bump together with .nvmrc and NODE_VERSION in Cloudflare.",
+            "matchPackageNames": ["@types/node"],
+            "allowedVersions": "<23"
+        },
+        {
+            "description": "VitePress: stay on 1.x (2.x is a separate theme/config migration). Remove after migrating.",
+            "matchPackageNames": ["vitepress"],
+            "allowedVersions": "<2"
+        }
+    ]
+}
