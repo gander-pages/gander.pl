@@ -1,7 +1,7 @@
 {
   "name": "gander.pl",
   "devDependencies": {
-    "@sentry/vue": "^10.3.0",
+    "@sentry/vue": "^11.0.0",
     "@types/node": "^22.18.0",
     "vitepress": "^1.6.4",
     "wrangler": "^4.148.0"
