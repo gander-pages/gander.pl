@@ -7,7 +7,7 @@
     "wrangler": "^4.148.0"
   },
   "private": true,
-  "packageManager": "npm@10.9.9",
+  "packageManager": "npm@12.2.0",
   "engines": {
     "node": ">=22 <23"
   },
