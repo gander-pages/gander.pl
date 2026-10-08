@@ -12,16 +12,16 @@ Gander Site is a comprehensive VitePress-based technical documentation site feat
 - Pimcore CMS solutions and workflows
 - Service integrations and API documentation
 
-The site is built with modern web technologies, deployed as a static site on Cloudflare Pages, and emphasizes security-first architecture with Content Security Policy implementation.
+The site is built with modern web technologies, deployed as static assets on a Cloudflare Worker, and emphasizes security-first architecture with Content Security Policy implementation.
 
 ## Technology Stack
 
 - **Static Site Generator**: VitePress for fast, modern documentation sites
-- **Deployment Platform**: Cloudflare Pages for global CDN and edge functions
+- **Deployment Platform**: Cloudflare Workers (static assets) for global CDN and edge processing
 - **Analytics**: Dual integration with Umami and Medama analytics platforms
 - **Security**: Content Security Policy with nonce-based loading
 - **Configuration Language**: TypeScript for type-safe configuration
-- **Middleware**: Cloudflare Functions for server-side processing
+- **Middleware**: Cloudflare Worker for server-side processing
 
 ## Prerequisites and Setup
 
@@ -55,13 +55,13 @@ This project uses [VitePress](https://vitepress.dev/):
   - CSP (Content Security Policy) implementation
   - Custom head transformations for nonce injection
 
-### Cloudflare Pages
-- **wrangler.jsonc**: Pages project config (`gander-pl`, output `.vitepress/dist`). Deploys are triggered by pushes to the Cloudflare-connected repo, not manually.
+### Cloudflare Workers
+- **wrangler.jsonc**: Worker config (`gander-pl`, static assets from `.vitepress/dist`, Worker runs first). Deploys are triggered by pushes to the Cloudflare-connected repo (Workers Builds, deploy command `npx wrangler deploy`), not manually.
 - **Build command**: `npm ci && npm run build`; Node version comes from `.nvmrc` / `NODE_VERSION`.
 - **renovate.json**: majors are separate PRs without automerge; Node, `@types/node` and `vitepress` are pinned to their current major.
 
 ### Middleware
-- **functions/_middleware.js**: Cloudflare Functions middleware that:
+- **worker/index.js**: Cloudflare Worker that wraps the static assets and:
   - Generates CSP nonces for security
   - Sets security headers including CSP reporting
   - Replaces nonce placeholders in HTML output
@@ -94,7 +94,7 @@ The project implements strict Content Security Policy with:
 - CSP reporting to external endpoint for violation monitoring
 - Environment-based analytics integration preventing hardcoded secrets
 - Support for both Umami and Medama analytics platforms
-- Comprehensive security headers via Cloudflare Functions middleware
+- Comprehensive security headers via the Cloudflare Worker
 
 ## Development Workflow
 
@@ -108,7 +108,7 @@ The project implements strict Content Security Policy with:
 ### Deployment and Maintenance
 - **Build Process**: Production builds are optimized for static hosting
 - **Preview Testing**: Use `npm run preview` to test builds locally before deployment
-- **Environment Variables**: All external integrations use environment variables for configuration, set in the Cloudflare Pages dashboard (there is no `.env` file in the repo)
+- **Environment Variables**: All external integrations use environment variables for configuration, set as build variables in the Cloudflare Workers Builds settings (there is no `.env` file in the repo)
 - **Content Updates**: Markdown files can be edited directly, changes are reflected after rebuild
 - **Security Monitoring**: CSP violations are reported to external endpoint for monitoring
 - **Analytics**: Both Umami and Medama analytics provide usage insights
