@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
+    "build:shallow": "if [ \"$(git rev-parse --is-shallow-repository)\" = \"true\" ]; then git fetch --unshallow; fi && npm run build",
     "preview": "vitepress preview"
   },
   "type": "module"
