@@ -3,6 +3,9 @@
 	"name": "gander-pl",
 	"main": "worker/index.js",
 	"compatibility_date": "2026-10-08",
+	"build": {
+		"command": "npm run build:shallow"
+	},
 	"assets": {
 		"directory": ".vitepress/dist",
 		"binding": "ASSETS",
