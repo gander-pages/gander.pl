@@ -1,6 +1,6 @@
 .idea
-.vitepress/dist
-.vitepress/cache
+dist/
+.astro/
 node_modules
 
 .env*
