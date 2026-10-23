@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-08-10T15:11:46+02:00
 title: "JetBrains: File Watchers"
+topic: jetbrains
 subtitle: Using NVM
 tags: [ JetBrains, File Watcher, NVM ]
 ---

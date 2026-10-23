@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-08-05T18:07:21+02:00
 title: "Fluentd: Docker Compose"
+topic: self-hosted
 tags: [Fluentd, Docker, Compose, Elastic, Search, Elasticsearch, Kibana, Logs]
 ---
 

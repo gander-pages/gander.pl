@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-11-09T21:40:02+01:00
 title: "Pimcore: Workflow Management"
+topic: pimcore
 tags: [ Pimcore, Workflow ]
 ---
 

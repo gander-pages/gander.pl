@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: sudo without password
+topic: linux
 tags: [linux, sudo, password]
 ---
 

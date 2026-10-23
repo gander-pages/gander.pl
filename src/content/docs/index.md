@@ -1,5 +1,6 @@
 ---
 title: Code solutions, tips and tricks
+topic: home
 tableOfContents: false
 prev: false
 next: false
