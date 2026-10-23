@@ -124,6 +124,7 @@ export default defineConfig({
             { label: 'Set GRUB to remember recently selected os', link: '/set-grub-to-remember-recently-selected-os' },
             { label: 'Signal Desktop Tray Icon', link: '/signal-desktop-tray-icon' },
             { label: 'Symfony 5/6', link: '/symfony' },
+            { label: 'Symfony Quirks', link: '/symfony-quirks' },
             { label: 'Take all registered jQuery Event Handlers', link: '/take-all-registered-jquery-event-handlers' },
             { label: 'Transparent Delayed Screen Autolock', link: '/transparent-delayed-screen-autolock' },
             { label: 'Windows 10 Auto LogIn', link: '/windows-10-auto-login' },
