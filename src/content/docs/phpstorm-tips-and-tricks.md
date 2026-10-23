@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: PhpStorm tips and tricks
+topic: jetbrains
 tags: [phpstorm, php, tips, tricks]
 ---
 

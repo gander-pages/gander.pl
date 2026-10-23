@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: Graylog Memory/Heap usage
+topic: self-hosted
 tags: [graylog, memory, heap]
 ---
 

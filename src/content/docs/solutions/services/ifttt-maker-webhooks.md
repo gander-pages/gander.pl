@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-05-01T12:33:48+02:00
 title: "IFTTT: Maker Webhooks"
+topic: services
 tags: [IFTTT, Maker, Webhooks, JSON, payload, value1, value2, value3, JsonPayload]
 ---
 

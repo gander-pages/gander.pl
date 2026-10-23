@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2024-03-28T11:56:26+01:00
 title: "Pimcore: Tinkerwell Driver"
+topic: pimcore
 tags: [ Pimcore, Tinkerwell, Custom, Driver ]
 ---
 

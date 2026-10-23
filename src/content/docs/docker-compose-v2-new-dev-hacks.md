@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: Docker Compose v2 - new dev hacks
+topic: docker
 tags: [docker, docker-compose, devops, dev-hacks]
 ---
 

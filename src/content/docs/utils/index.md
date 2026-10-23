@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2024-03-12T11:07:37+01:00
 title: Utils
+topic: javascript
 tags: [utils, libs]
 ---
 

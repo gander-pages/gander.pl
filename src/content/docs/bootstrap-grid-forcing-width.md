@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: Bootstrap Grid forcing width
+topic: frontend
 tags: [css, bootstrap, grid]
 ---
 

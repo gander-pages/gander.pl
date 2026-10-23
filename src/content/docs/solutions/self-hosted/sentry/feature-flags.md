@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2024-11-25T21:48:28+01:00
 title: "Sentry: Feature Flags"
+topic: self-hosted
 tags: [ sentry, self-hosted, early features ]
 outline: [ 2, 3 ]
 ---

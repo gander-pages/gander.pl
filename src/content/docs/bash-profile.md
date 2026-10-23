@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: .bash_profile
+topic: linux
 tags: [bash, bash_profile, bashrc, bash_aliases, .bash_profile, .bashrc, .bash_aliases, .prof]
 ---
 

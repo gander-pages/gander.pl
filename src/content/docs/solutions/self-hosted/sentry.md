@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2024-11-25T22:08:36+01:00
 title: "Sentry: Install, Backup and Re-Install"
+topic: self-hosted
 tags: [ sentry, self-hosted, install, reinstall, import, export ]
 outline: [ 2, 3 ]
 ---

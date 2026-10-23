@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2025-08-10T12:12:54+02:00
 title: "Automatically Delete Failed GitHub Actions Workflows via CLI"
+topic: git
 description: |
     A practical guide on how to automatically delete failed workflow runs in a GitHub repository using GitHub CLI with xargs and jq.
 ---

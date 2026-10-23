@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2024-03-28T11:39:15+01:00
 title: "Buggregator: PHP Debugging Server"
+topic: php
 tags: [ buggregator ]
 ---
 

@@ -2,10 +2,19 @@
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 
 // Keep the homepage H1 for screen readers and SEO, but hide it visually.
-const { id, entry } = Astro.locals.starlightRoute;
+const { id, entry, lastUpdated } = Astro.locals.starlightRoute;
 const isHome = id === '';
+
+// Medama page event properties (requires "Page View Events" enabled in the Medama tracker settings).
+const section = isHome ? 'home' : id.includes('/') ? id.split('/')[0] : 'root';
+const pageEvent = [
+	`section=${section}`,
+	`topic=${entry.data.topic ?? 'none'}`,
+	`updated=${lastUpdated?.getFullYear() ?? 'none'}`,
+].join(';');
 ---
 
+<span hidden data-m:load={pageEvent}></span>
 {
 	isHome ? (
 		<h1 id="_top" class="sr-only">

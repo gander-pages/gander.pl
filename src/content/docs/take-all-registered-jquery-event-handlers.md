@@ -1,6 +1,7 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
 title: Take all registered jQuery Event Handlers
+topic: javascript
 tags: [jquery, event, handler, registered, take, all]
 ---
 
