@@ -27,6 +27,7 @@ export default defineConfig({
     starlight({
       title: 'Gander Site',
       description: 'Code solutions, tips and tricks.',
+      logo: { src: './src/assets/gander-duck.png', alt: 'Gander duck' },
       favicon: '/favicon.ico',
       lastUpdated: true,
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 6 },
