@@ -21,25 +21,25 @@ Short notes and code solutions. Use the search (press `/` or `Ctrl+K`) or browse
   <tr>
     <td align="center">
       <a href="https://github.com/gander-tools" target="_blank" rel="noopener">
-        <img src="https://raw.githubusercontent.com/gander-tools/.github/refs/heads/main/assets/duck.svg" alt="Gander Tools" width="96"><br>
+        <img src="/assets/gander-tools.svg" alt="Gander Tools" width="96"><br>
         Gander Tools
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/gander-pages" target="_blank" rel="noopener">
-        <img src="https://raw.githubusercontent.com/gander-pages/.github/refs/heads/main/assets/duck.svg" alt="Gander Pages" width="96"><br>
+        <img src="/assets/gander-pages.svg" alt="Gander Pages" width="96"><br>
         Gander Pages
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/gander-labs" target="_blank" rel="noopener">
-        <img src="https://raw.githubusercontent.com/gander-labs/.github/refs/heads/main/assets/duck.svg" alt="Gander Labs" width="96"><br>
+        <img src="/assets/gander-labs.svg" alt="Gander Labs" width="96"><br>
         Gander Labs
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/gander-archive" target="_blank" rel="noopener">
-        <img src="https://raw.githubusercontent.com/gander-archive/.github/refs/heads/main/assets/duck.svg" alt="Gander Archive" width="96"><br>
+        <img src="/assets/gander-archive.svg" alt="Gander Archive" width="96"><br>
         Gander Archive
       </a>
     </td>
