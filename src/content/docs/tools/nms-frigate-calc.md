@@ -48,5 +48,6 @@ that may become new features once they are ready:
 
 + a planner for the resources needed to expand settlements,
 + a frigate log that helps you manage your fleet.
++ screenshot import: snap the frigate screen and let OCR read the stats for you.
 
 [calc]: https://nms.gander.tools/
