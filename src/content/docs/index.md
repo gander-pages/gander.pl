@@ -7,7 +7,7 @@ lastUpdated: false
 editUrl: false
 ---
 
-Short notes and code solutions. Use the search (press `/` or `Ctrl+K`) or browse the sidebar.
+Solutions to problems I've run into at work and in hobby projects: Symfony, Pimcore, Vue, JetBrains IDEs, DevOps, Linux (Mint) and Windows. Use the search (press `/` or `Ctrl+K`) or browse the sidebar.
 
 ## Popular projects
 
