@@ -27,4 +27,4 @@ That's why I created this [calculator][calc].
 + [A Guide to Evaluating Frigate Stats](https://www.reddit.com/r/NoMansSkyTheGame/comments/knjokc/a_guide_to_evaluating_frigate_stats/)
 + [Frigate Buyer's Guide - How to Pick the Best Ships (and avoid "Lemons")](https://steamcommunity.com/sharedfiles/filedetails/?id=1505175794)
 
-[calc]: https://nms-frigate-calc.gander.dev/
+[calc]: https://nms.gander.tools/
