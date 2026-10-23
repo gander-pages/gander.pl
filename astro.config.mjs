@@ -37,7 +37,10 @@ export default defineConfig({
         { icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/adam-gasowski/' },
       ],
       head,
-      components: { SocialIcons: './src/components/SocialIcons.astro' },
+      components: {
+        PageTitle: './src/components/PageTitle.astro',
+        SocialIcons: './src/components/SocialIcons.astro',
+      },
       sidebar: [
         {
           label: 'Services',

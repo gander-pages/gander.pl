@@ -1,0 +1,17 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+// Keep the homepage H1 for screen readers and SEO, but hide it visually.
+const { id, entry } = Astro.locals.starlightRoute;
+const isHome = id === '';
+---
+
+{
+	isHome ? (
+		<h1 id="_top" class="sr-only">
+			{entry.data.title}
+		</h1>
+	) : (
+		<Default />
+	)
+}

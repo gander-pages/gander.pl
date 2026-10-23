@@ -3,9 +3,8 @@ title: Gander Site
 tableOfContents: false
 prev: false
 next: false
-head:
-  - tag: style
-    content: 'h1#_top{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}'
+lastUpdated: false
+editUrl: false
 ---
 
 Short notes and code solutions. Use the search (press `/` or `Ctrl+K`) or browse the sidebar.
