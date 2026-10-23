@@ -1,5 +1,5 @@
 ---
-lastUpdated: 2026-10-23T08:30:00+02:00
+lastUpdated: 2026-10-23T08:45:00+02:00
 title: "No Man's Sky: Frigate Calc"
 tags: [nms, no mans sky, frigate, calc, calculator, fleet, game, mobile]
 ---
@@ -19,6 +19,16 @@ It is quite simple and you can calculate it in your mind, but to minimize the ri
 it is better to use a calculator. I found spreadsheets prepared for these calculations, 
 but not a single interactive calculator that could be run on a smartphone for ease of use. 
 That's why I created this [calculator][calc].
+
+## How to use
+
+1. Open the [calculator][calc] while inspecting a frigate in the game.
+2. Enter the frigate's stats and traits. You can type several values separated by spaces,
+   or enter a single total if you don't want to type each value.
+3. The result updates as you type. The bar shows how profitable the frigate is:
+   green means it's worth buying, yellow means it's average, red means avoid it.
+
+You could do this math in your head, but the calculator saves you from remembering the formula.
 
 ## Source code
 
