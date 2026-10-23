@@ -12,7 +12,7 @@ Short notes and code solutions. Use the search (press `/` or `Ctrl+K`) or browse
 ## Popular projects
 
 - <a href="https://github.com/gander-mcp/osm-tagging-schema-mcp" target="_blank" rel="noopener">osm-tagging-schema-mcp</a>: `MCP` server providing **OpenStreetMap** tagging schema tools for `AI` assistants: validate tags, query values, search presets, and suggest improvements.
-- <a href="https://github.com/gander-tools/nms-frigate-calc" target="_blank" rel="noopener">nms-frigate-calc</a>: a calculator for the game **No Man's Sky** that allows you to quickly check if a frigate has the correct statistics and if it is worth buying. <a href="https://nms.gander.tools/" target="_blank" rel="noopener">Use it!</a>
+- <a href="https://github.com/gander-tools/nms-frigate-calc" target="_blank" rel="noopener">nms-frigate-calc</a>: a calculator for the game **No Man's Sky** that allows you to quickly check if a frigate has the correct statistics and if it is worth buying. <a href="/tools/nms-frigate-calc">About</a> · <a href="https://nms.gander.tools/" target="_blank" rel="noopener">Use it!</a>
 - <a href="https://github.com/gander-tools/monkey-redmine-time-widget" target="_blank" rel="noopener">monkey-redmine-time-widget</a>: **Redmine** widget for total dev time presentation.
 
 ## GitHub
