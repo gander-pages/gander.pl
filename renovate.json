@@ -1,32 +1,18 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>gander-settings/renovate:automerge"],
-    "separateMajorMinor": true,
-    "separateMultipleMajor": true,
-    "minimumReleaseAge": "7 days",
+    "extends": [
+        "github>gander-settings/renovate:automerge",
+        "github>gander-settings/renovate:pin(node,24)",
+        "github>gander-settings/renovate:pin(astro,7)",
+        "github>gander-settings/renovate:pin(@astrojs/starlight,0.42)",
+        "github>gander-settings/renovate:before(@types/node,25)"
+    ],
     "packageRules": [
         {
-            "description": "Major: separate PR per major version, no automerge.",
+            "description": "Major: label and reminder. Separate PRs and no automerge come from the preset.",
             "matchUpdateTypes": ["major"],
-            "automerge": false,
             "labels": ["major-update"],
             "prBodyNotes": ["Major bump: read the changelog, check the Cloudflare build and the versions in .nvmrc."]
-        },
-        {
-            "description": "Node (.nvmrc): major bumps are manual only, together with NODE_VERSION in Cloudflare.",
-            "matchDepNames": ["node"],
-            "matchUpdateTypes": ["major"],
-            "enabled": false
-        },
-        {
-            "description": "@types/node: keep in line with the runtime from .nvmrc (22). Bump together with .nvmrc and NODE_VERSION in Cloudflare.",
-            "matchPackageNames": ["@types/node"],
-            "allowedVersions": "<23"
-        },
-        {
-            "description": "VitePress: stay on 1.x (2.x is a separate theme/config migration). Remove after migrating.",
-            "matchPackageNames": ["vitepress"],
-            "allowedVersions": "<2"
         }
     ]
 }
