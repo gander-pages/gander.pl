@@ -20,6 +20,11 @@ it is better to use a calculator. I found spreadsheets prepared for these calcul
 but not a single interactive calculator that could be run on a smartphone for ease of use. 
 That's why I created this [calculator][calc].
 
+## Source code
+
++ [gander-tools/nms-frigate-calc](https://github.com/gander-tools/nms-frigate-calc): the calculator app
++ [gander-tools/nms-lib](https://github.com/gander-tools/nms-lib): No Man's Sky library for frigate calculations
+
 
 
 ## Resources
