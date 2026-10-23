@@ -20,9 +20,23 @@ it is better to use a calculator. I found spreadsheets prepared for these calcul
 but not a single interactive calculator that could be run on a smartphone for ease of use. 
 That's why I created this [calculator][calc].
 
+## Source code
+
++ [gander-tools/nms-frigate-calc](https://github.com/gander-tools/nms-frigate-calc): the calculator app
++ [gander-tools/nms-lib](https://github.com/gander-tools/nms-lib): No Man's Sky library for frigate calculations
+
 ## Resources
 
 + [A Guide to Evaluating Frigate Stats](https://www.reddit.com/r/NoMansSkyTheGame/comments/knjokc/a_guide_to_evaluating_frigate_stats/)
 + [Frigate – No Man's Sky Wiki](https://nomanssky.fandom.com/wiki/Frigate)
+
+## What's next
+
+I still play No Man's Sky and use the calculator myself. I'm moving it to [nms-lib](https://github.com/gander-tools/nms-lib),
+and I'm testing a few proof-of-concept helpers in [Gander Labs](https://github.com/gander-labs)
+that may become new features once they are ready:
+
++ a planner for the resources needed to expand settlements,
++ a frigate log that helps you manage your fleet.
 
 [calc]: https://nms.gander.tools/
