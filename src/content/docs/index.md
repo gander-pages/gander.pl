@@ -1,5 +1,5 @@
 ---
-title: Gander Site
+title: Code solutions, tips and tricks
 tableOfContents: false
 prev: false
 next: false
