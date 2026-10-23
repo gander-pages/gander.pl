@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: Vue.js tips and tricks
 tags: [vue, vuejs, vue.js, vue3]
 ---

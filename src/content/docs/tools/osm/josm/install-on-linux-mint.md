@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-11-09T13:08:41+01:00
 title: "JOSM: Install on Linux Mint"
 tags: [ JOSM, Linux Mint, Install ]
 ---

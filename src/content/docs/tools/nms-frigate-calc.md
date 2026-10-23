@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-29T01:50:04+02:00
 title: "No Man's Sky: Frigate Calc"
 tags: [nms, no mans sky, frigate, calc, calculator, fleet, game, mobile]
 ---

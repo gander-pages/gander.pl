@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: Linux Mint 20 NVIDIA Driver
 tags: [linux, mint, nvidia, driver]
 ---

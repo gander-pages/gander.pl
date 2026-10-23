@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:21:17+02:00
 title: JSFiddle quick add predefined external resources
 tags: [jsfiddle]
 ---

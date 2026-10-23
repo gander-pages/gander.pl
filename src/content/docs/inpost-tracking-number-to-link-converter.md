@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:21:17+02:00
 title: InPost tracking number to link converter
 tags: [javascript, inpost, tracking, number, link, parcel, allegro, manager]
 ---

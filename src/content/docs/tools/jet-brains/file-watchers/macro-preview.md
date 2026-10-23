@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-08-05T18:07:56+02:00
 title: "JetBrains: File Watchers"
 subtitle: Macro Preview
 tags: [ JetBrains, File Watcher, Preview, Argument, Macro ]

@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2024-03-28T21:52:37+01:00
 title: "PhpStorm: LightEdit"
 tags: [ JetBrains, PhpStorm, LightEdit ]
 ---

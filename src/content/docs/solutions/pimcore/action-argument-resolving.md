@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-10-26T18:20:32+02:00
 title: "Pimcore: Action Argument Resolving"
 subtitle: "Migration from ParamConverter to MapEntity"
 tags: [ Pimcore, ParamConverter, MapEntity, DataObjectParam, Symfony, Symfony 6.2 ]

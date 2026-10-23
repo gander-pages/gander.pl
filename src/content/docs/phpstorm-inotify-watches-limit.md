@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: PhpStorm Inotify Watches Limit
 tags: [phpstorm, inotify, watches, limit]
 ---

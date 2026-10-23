@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: 'Ubuntu: error while loading shared libraries'
 tags: [ubuntu, linux, error, shared, libraries]
 ---

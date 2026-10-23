@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-11-29T10:52:15+01:00
 title: "Pimcore: ExtJS"
 tags: [ Pimcore, ExtJS ]
 ---

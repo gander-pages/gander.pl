@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: How to resolve SAOError when using create-nuxt-app
 tags: [nuxt, create-nuxt-app, sao, saoerror]
 ---

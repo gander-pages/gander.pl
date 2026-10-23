@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: JetBrains IDE - File Watchers
 tags: [vue, vue-cli, vue-cli-service, jetbrains, ide, file watchers, file watcher, filewatch]
 ---

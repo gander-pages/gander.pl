@@ -1,4 +1,5 @@
 ---
+lastUpdated: 2023-04-11T01:08:30+02:00
 title: MySQL utf8 Default Charset
 tags: [mysql, utf8, utf8mb4]
 ---
