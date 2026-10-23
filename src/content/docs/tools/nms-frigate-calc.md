@@ -31,6 +31,9 @@ That's why I created this [calculator][calc].
 
 I still play No Man's Sky and use the calculator myself. I'm moving it to [nms-lib](https://github.com/gander-tools/nms-lib),
 and I'm testing a few proof-of-concept helpers in [Gander Labs](https://github.com/gander-labs)
-that may become new features once they are ready.
+that may become new features once they are ready:
+
++ a planner for the resources needed to expand settlements,
++ a frigate log that helps you manage your fleet.
 
 [calc]: https://nms.gander.tools/
