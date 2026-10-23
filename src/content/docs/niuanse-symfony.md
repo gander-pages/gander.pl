@@ -1,18 +1,18 @@
 ---
 lastUpdated: 2023-04-11T01:08:30+02:00
-title: Niuanse Symfony
+title: Symfony Quirks
 tags: [symfony, php]
 ---
 
 Serializer
 ==========
 
-Grupy
------
+Groups
+------
 
-Trzeba zainicjować `MetaClassFactory` by grupy działały.
+You have to initialize `MetaClassFactory` for groups to work.
 
 Workflow
 ========
 
-Trzeba dodawać dokładnie jedno przejście `from` -> `to`, a jesli potrzeba `[from, from, from]` -> `to` to trzeba dodać wiele przejść o tej samej nazwie.
+You have to add exactly one `from` -> `to` transition. If you need `[from, from, from]` -> `to`, add multiple transitions with the same name.
