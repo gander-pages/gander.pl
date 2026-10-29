@@ -1,7 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "github>gander-settings/renovate:automerge",
+        "github>gander-settings/renovate",
         "github>gander-settings/renovate:pin(node,24)",
         "github>gander-settings/renovate:pin(astro,7)",
         "github>gander-settings/renovate:pin(@astrojs/starlight,0.42)",
