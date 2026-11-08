@@ -1,13 +1,13 @@
 {
   "name": "gander.pl",
   "devDependencies": {
-    "@astrojs/starlight": "^0.42.6",
+    "@astrojs/starlight": "^0.42.7",
     "@types/node": "^24.19.2",
-    "astro": "^7.4.2",
+    "astro": "^7.4.4",
     "wrangler": "^4.152.0"
   },
   "private": true,
-  "packageManager": "npm@12.2.1",
+  "packageManager": "npm@12.2.2",
   "engines": {
     "node": ">=24 <25"
   },
