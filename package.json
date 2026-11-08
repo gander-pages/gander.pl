@@ -4,7 +4,7 @@
     "@astrojs/starlight": "0.42.9",
     "@types/node": "24.19.2",
     "astro": "7.4.5",
-    "wrangler": "4.155.0"
+    "wrangler": "4.156.2"
   },
   "private": true,
   "packageManager": "npm@12.2.2",
