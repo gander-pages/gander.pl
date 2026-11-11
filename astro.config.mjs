@@ -47,14 +47,19 @@ export default defineConfig({
           label: 'Useful links',
           items: [
             {
-              label: 'Google Chrome Remote Desktop',
-              link: 'https://google-chrome-remote-desktop.gander.pl/',
-              attrs: { target: '_blank', rel: 'noopener', 'data-m:click': 'action=useful_link;target=google-chrome-remote-desktop' },
-            },
-            {
-              label: 'RustDesk',
-              link: 'https://rust-desk-remote-desktop.gander.pl/',
-              attrs: { target: '_blank', rel: 'noopener', 'data-m:click': 'action=useful_link;target=rust-desk-remote-desktop' },
+              label: 'Remote desktop',
+              items: [
+                {
+                  label: 'Google Chrome',
+                  link: 'https://google-chrome-remote-desktop.gander.pl/',
+                  attrs: { target: '_blank', rel: 'noopener', 'data-m:click': 'action=useful_link;target=google-chrome-remote-desktop' },
+                },
+                {
+                  label: 'RustDesk',
+                  link: 'https://rust-desk-remote-desktop.gander.pl/',
+                  attrs: { target: '_blank', rel: 'noopener', 'data-m:click': 'action=useful_link;target=rust-desk-remote-desktop' },
+                },
+              ],
             },
           ],
         },
