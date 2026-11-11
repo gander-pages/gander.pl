@@ -16,6 +16,11 @@ Solutions to problems I've run into at work and in hobby projects: Symfony, Pimc
 - <a href="https://github.com/gander-tools/nms-frigate-calc" target="_blank" rel="noopener" data-m:click="action=repo;project=nms-frigate-calc">nms-frigate-calc</a>: a calculator for the game **No Man's Sky** that allows you to quickly check if a frigate has the correct statistics and if it is worth buying. <a href="/tools/nms-frigate-calc" data-m:click="action=about;project=nms-frigate-calc">About</a> · <a href="https://nms.gander.tools/" target="_blank" rel="noopener" data-m:click="action=use_it;project=nms-frigate-calc">Use it!</a>
 - <a href="https://github.com/gander-tools/monkey-redmine-time-widget" target="_blank" rel="noopener" data-m:click="action=repo;project=monkey-redmine-time-widget">monkey-redmine-time-widget</a>: **Redmine** widget for total dev time presentation.
 
+## Remote desktop
+
+- <a href="https://google-chrome-remote-desktop.gander.pl/" target="_blank" rel="noopener" data-m:click="action=remote_desktop;tool=google-chrome-remote-desktop">Google Chrome Remote Desktop</a>
+- <a href="https://rust-desk-remote-desktop.gander.pl/" target="_blank" rel="noopener" data-m:click="action=remote_desktop;tool=rust-desk-remote-desktop">RustDesk</a>
+
 ## GitHub
 
 <table>
