@@ -44,6 +44,26 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: 'Useful links',
+          items: [
+            {
+              label: 'Remote desktop',
+              items: [
+                {
+                  label: 'Google Chrome',
+                  link: 'https://google-chrome-remote-desktop.gander.pl/',
+                  attrs: { target: '_blank', rel: 'noopener', 'data-m:click': 'action=useful_link;target=google-chrome-remote-desktop' },
+                },
+                {
+                  label: 'RustDesk',
+                  link: 'https://rust-desk-remote-desktop.gander.pl/',
+                  attrs: { target: '_blank', rel: 'noopener', 'data-m:click': 'action=useful_link;target=rust-desk-remote-desktop' },
+                },
+              ],
+            },
+          ],
+        },
+        {
           label: 'Services',
           items: [{ label: 'IFTTT: Maker Webhooks', link: '/solutions/services/ifttt-maker-webhooks' }],
         },
