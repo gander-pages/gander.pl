@@ -3,8 +3,8 @@
   "devDependencies": {
     "@astrojs/starlight": "0.42.10",
     "@types/node": "24.19.2",
-    "astro": "7.4.10",
-    "wrangler": "4.160.0"
+    "astro": "7.4.11",
+    "wrangler": "4.160.1"
   },
   "private": true,
   "packageManager": "npm@12.2.2",
