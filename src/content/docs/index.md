@@ -18,31 +18,23 @@ Solutions to problems I've run into at work and in hobby projects: Symfony, Pimc
 
 ## GitHub
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/gander-tools" target="_blank" rel="noopener" data-m:click="action=org;org=gander-tools">
-        <img src="/assets/gander-tools.svg" alt="Gander Tools" width="96"><br>
-        Gander Tools
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/gander-pages" target="_blank" rel="noopener" data-m:click="action=org;org=gander-pages">
-        <img src="/assets/gander-pages.svg" alt="Gander Pages" width="96"><br>
-        Gander Pages
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/gander-labs" target="_blank" rel="noopener" data-m:click="action=org;org=gander-labs">
-        <img src="/assets/gander-labs.svg" alt="Gander Labs" width="96"><br>
-        Gander Labs
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/gander-archive" target="_blank" rel="noopener" data-m:click="action=org;org=gander-archive">
-        <img src="/assets/gander-archive.svg" alt="Gander Archive" width="96"><br>
-        Gander Archive
-      </a>
-    </td>
-  </tr>
-</table>
+<div class="not-content" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; line-height: 0;">
+  <a href="https://github.com/gander" target="_blank" rel="noopener" data-m:click="action=org;org=gander"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/gander.svg" alt="Gander" width="100" height="100"></a>
+  <a href="https://github.com/gander-tools" target="_blank" rel="noopener" data-m:click="action=org;org=gander-tools"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/tools.svg" alt="Tools" width="100" height="100"></a>
+  <a href="https://github.com/gander-pages" target="_blank" rel="noopener" data-m:click="action=org;org=gander-pages"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/pages.svg" alt="Pages" width="100" height="100"></a>
+  <a href="https://github.com/gander-labs" target="_blank" rel="noopener" data-m:click="action=org;org=gander-labs"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/labs.svg" alt="Labs" width="100" height="100"></a>
+  <a href="https://github.com/gander-actions" target="_blank" rel="noopener" data-m:click="action=org;org=gander-actions"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/actions.svg" alt="Actions" width="100" height="100"></a>
+  <a href="https://github.com/gander-apis" target="_blank" rel="noopener" data-m:click="action=org;org=gander-apis"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/apis.svg" alt="APIs" width="100" height="100"></a>
+  <a href="https://github.com/gander-data" target="_blank" rel="noopener" data-m:click="action=org;org=gander-data"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/data.svg" alt="Data" width="100" height="100"></a>
+  <a href="https://github.com/gander-mcp" target="_blank" rel="noopener" data-m:click="action=org;org=gander-mcp"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/mcp.svg" alt="MCP" width="100" height="100"></a>
+  <a href="https://github.com/gander-n8n" target="_blank" rel="noopener" data-m:click="action=org;org=gander-n8n"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/n8n.svg" alt="n8n" width="100" height="100"></a>
+  <a href="https://github.com/gander-schemas" target="_blank" rel="noopener" data-m:click="action=org;org=gander-schemas"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/schemas.svg" alt="Schemas" width="100" height="100"></a>
+  <a href="https://github.com/gander-settings" target="_blank" rel="noopener" data-m:click="action=org;org=gander-settings"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/settings.svg" alt="Settings" width="100" height="100"></a>
+  <a href="https://github.com/gander-skills" target="_blank" rel="noopener" data-m:click="action=org;org=gander-skills"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/skills.svg" alt="Skills" width="100" height="100"></a>
+  <a href="https://github.com/gander-templates" target="_blank" rel="noopener" data-m:click="action=org;org=gander-templates"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/templates.svg" alt="Templates" width="100" height="100"></a>
+  <a href="https://github.com/gander-scripts" target="_blank" rel="noopener" data-m:click="action=org;org=gander-scripts"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/scripts.svg" alt="Scripts" width="100" height="100"></a>
+  <a href="https://github.com/gander-containers" target="_blank" rel="noopener" data-m:click="action=org;org=gander-containers"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/containers.svg" alt="Containers" width="100" height="100"></a>
+  <a href="https://github.com/gander-examples" target="_blank" rel="noopener" data-m:click="action=org;org=gander-examples"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/examples.svg" alt="Examples" width="100" height="100"></a>
+  <a href="https://github.com/gander-archive" target="_blank" rel="noopener" data-m:click="action=org;org=gander-archive"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/archive.svg" alt="Archive" width="100" height="100"></a>
+  <a href="https://github.com/diff-voyager" target="_blank" rel="noopener" data-m:click="action=org;org=diff-voyager"><img src="https://raw.githubusercontent.com/gander/gander/master/assets/tiles/diff-voyager.svg" alt="Diff Voyager" width="100" height="100"></a>
+</div>
