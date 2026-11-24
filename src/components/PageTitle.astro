@@ -2,15 +2,18 @@
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 
 // Keep the homepage H1 for screen readers and SEO, but hide it visually.
-const { id, entry, lastUpdated } = Astro.locals.starlightRoute;
-const isHome = id === '';
+const { id, locale, lang, entry, lastUpdated } = Astro.locals.starlightRoute;
+// Strip the locale prefix so that /pl and /pl/... map to the same sections as their English pages.
+const slug = locale && (id === locale || id.startsWith(`${locale}/`)) ? id.slice(locale.length + 1) : id;
+const isHome = slug === '';
 
 // Medama page event properties (requires "Page View Events" enabled in the Medama tracker settings).
-const section = isHome ? 'home' : id.includes('/') ? id.split('/')[0] : 'root';
+const section = isHome ? 'home' : slug.includes('/') ? slug.split('/')[0] : 'root';
 const pageEvent = [
 	`section=${section}`,
 	`topic=${entry.data.topic ?? 'none'}`,
 	`updated=${lastUpdated?.getFullYear() ?? 'none'}`,
+	`lang=${lang}`,
 ].join(';');
 ---
 

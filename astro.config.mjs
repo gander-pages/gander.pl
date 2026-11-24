@@ -1,6 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
+import { readdirSync } from 'node:fs';
+
+// Polish pages that really exist. Starlight renders every other docs page under /pl/ as an
+// English fallback copy; those copies stay out of the sitemap and get `noindex` (see Head.astro).
+const plPages = new Set(
+  readdirSync(new URL('./src/content/docs/pl/', import.meta.url), { recursive: true })
+    .filter((file) => /\.mdx?$/.test(file))
+    .map((file) => file.replace(/\.mdx?$/, '').replace(/(^|\/)index$/, ''))
+    .map((slug) => (slug ? `/pl/${slug}` : '/pl')),
+);
 
 const head = [
   { tag: 'link', attrs: { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' } },
@@ -25,11 +36,24 @@ export default defineConfig({
   site: 'https://gander.pl',
   trailingSlash: 'never',
   integrations: [
+    // Own sitemap instead of Starlight's built-in one, to filter out the fallback pages.
+    sitemap({
+      i18n: { defaultLocale: 'root', locales: { root: 'en', pl: 'pl' } },
+      filter: (page) => {
+        const path = new URL(page).pathname.replace(/\/$/, '');
+        return !path.startsWith('/pl') || plPages.has(path);
+      },
+    }),
     starlight({
       title: 'Gander Site',
       description: 'Code solutions, tips and tricks.',
       logo: { src: './src/assets/gander-duck.png', alt: 'Gander duck' },
       favicon: '/favicon.ico',
+      defaultLocale: 'root',
+      locales: {
+        root: { label: 'English', lang: 'en' },
+        pl: { label: 'Polski', lang: 'pl' },
+      },
       lastUpdated: true,
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 6 },
       editLink: { baseUrl: 'https://github.com/gander-pages/gander.pl/edit/master/' },
@@ -42,6 +66,7 @@ export default defineConfig({
       head,
       customCss: ['./src/styles/custom.css'],
       components: {
+        Head: './src/components/Head.astro',
         PageTitle: './src/components/PageTitle.astro',
         SocialIcons: './src/components/SocialIcons.astro',
         Footer: './src/components/Footer.astro',
@@ -49,9 +74,11 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Useful links',
+          translations: { pl: 'Przydatne linki' },
           items: [
             {
               label: 'Remote desktop',
+              translations: { pl: 'Zdalny pulpit' },
               items: [
                 {
                   label: 'Google Chrome',
@@ -69,6 +96,7 @@ export default defineConfig({
         },
         {
           label: 'Services',
+          translations: { pl: 'Usługi' },
           items: [{ label: 'IFTTT: Maker Webhooks', link: '/solutions/services/ifttt-maker-webhooks' }],
         },
         {
@@ -95,6 +123,7 @@ export default defineConfig({
         },
         {
           label: 'Tools / Projects',
+          translations: { pl: 'Narzędzia / projekty' },
           items: [
             { label: 'Buggregator', link: '/tools/buggregator' },
             {
@@ -126,10 +155,12 @@ export default defineConfig({
         },
         {
           label: 'Utils',
-          items: [{ label: 'List', link: '/utils' }],
+          translations: { pl: 'Biblioteki' },
+          items: [{ label: 'List', translations: { pl: 'Lista' }, link: '/utils' }],
         },
         {
           label: 'Outdated:',
+          translations: { pl: 'Nieaktualne:' },
           collapsed: true,
           items: [
             { label: 'Debian CheatSheet', link: '/debian-cheatsheet' },
