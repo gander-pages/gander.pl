@@ -40,6 +40,7 @@ export default defineConfig({
         { icon: 'rss', label: 'RSS feed', href: '/rss.xml' },
       ],
       head,
+      customCss: ['./src/styles/custom.css'],
       components: {
         PageTitle: './src/components/PageTitle.astro',
         SocialIcons: './src/components/SocialIcons.astro',
