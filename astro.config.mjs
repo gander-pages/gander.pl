@@ -7,6 +7,7 @@ const head = [
   { tag: 'link', attrs: { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' } },
   { tag: 'link', attrs: { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' } },
   { tag: 'link', attrs: { rel: 'manifest', href: '/site.webmanifest' } },
+  { tag: 'link', attrs: { rel: 'alternate', type: 'application/rss+xml', title: 'Gander Site', href: '/rss.xml' } },
 ];
 
 if (process.env.VITE_UMAMI_ID && process.env.VITE_UMAMI_SRC) {
@@ -36,6 +37,7 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/gander' },
         { icon: 'stackOverflow', label: 'Stack Overflow', href: 'https://stackoverflow.com/users/4559414/gander' },
         { icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/adam-gasowski/' },
+        { icon: 'rss', label: 'RSS feed', href: '/rss.xml' },
       ],
       head,
       components: {
