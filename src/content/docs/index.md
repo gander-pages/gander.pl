@@ -12,13 +12,13 @@ Solutions to problems I've run into at work and in hobby projects: Symfony, Pimc
 
 ## 👋 About me
 
-I'm a **PHP developer** with over twenty years of experience, online since 2005 as **gander**. I started out in the <a href="https://github.com/PHPFusion/PHPFusion" target="_blank" rel="noopener">PHP-Fusion</a> community, and what began as a hobby grew into websites, online shops, integrations and data import systems, built with <a href="https://symfony.com/" target="_blank" rel="noopener">Symfony</a>, <a href="https://pimcore.com/" target="_blank" rel="noopener">Pimcore</a>, <a href="https://www.coreshop.org/" target="_blank" rel="noopener">CoreShop</a>, <a href="https://laravel.com/" target="_blank" rel="noopener">Laravel</a> and <a href="https://github.com/magento/magento2" target="_blank" rel="noopener">Magento</a>, among others.
+I'm a **PHP developer** with over twenty years of experience, online since 2005 as **gander**. What began as a hobby in the PHP-Fusion community grew into websites, online shops, integrations and data import systems, built mostly with <a href="https://symfony.com/" target="_blank" rel="noopener">Symfony</a>, <a href="https://getlaminas.org/" target="_blank" rel="noopener">Zend</a> and CMS/CMF platforms.
 
-🤝 In every team I care about the same things: **peer code review**, **automated quality checks in CI/CD** (<a href="https://github.com/easy-coding-standard/easy-coding-standard" target="_blank" rel="noopener">ECS</a>, <a href="https://getrector.com/" target="_blank" rel="noopener">Rector</a>, <a href="https://biomejs.dev/" target="_blank" rel="noopener">Biome</a>, <a href="https://github.com/evilmartians/lefthook" target="_blank" rel="noopener">Lefthook</a>), **dependency security**, and a <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> setup that lets a new person run the project quickly. I'd rather fix legacy code than abandon it. 🛠️
+🤝 I care about **peer code review**, **automated quality checks in CI/CD**, **dependency security** and a Docker setup that gets a new person running quickly. I'd rather fix legacy code than abandon it.
 
-🚀 Beyond PHP, I build <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> tools with <a href="https://bun.sh/" target="_blank" rel="noopener">Bun</a> and apps on <a href="https://workers.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Workers</a>, and I treat <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a> and LLMs like colleagues who need clear rules. With them I refresh my own projects and those of friends.
+🚀 Beyond PHP, I build TypeScript tools and apps on <a href="https://workers.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Workers</a>, and I treat <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a> and LLMs like colleagues who need clear rules.
 
-🗺️ I've been contributing to <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> since 2021: I keep the map up to date with a range of mapping tools and build AI-powered software that makes mapping easier.
+🗺️ I've been contributing to <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a> since 2021: I keep the map up to date and build AI-powered software that makes mapping easier.
 
 ## Popular projects
 
