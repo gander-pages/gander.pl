@@ -10,6 +10,10 @@ editUrl: false
 
 Solutions to problems I've run into at work and in hobby projects: Symfony, Pimcore, Vue, JetBrains IDEs, DevOps, Linux (Mint) and Windows. Use the search (press `/` or `Ctrl+K`) or browse the sidebar.
 
+## About me
+
+I'm a PHP developer with over twenty years of experience, online since 2005 as gander. I started out in the PHP-Fusion community, and what began as a hobby grew into websites, online shops, integrations and data import systems, built with Symfony, Pimcore, CoreShop, Laravel and Magento, among others. In every team I care about the same things: peer code review, automated quality checks in CI/CD (ECS, Rector, Biome, Lefthook), dependency security, and a Docker setup that lets a new person run the project quickly. I'd rather fix legacy code than abandon it. Beyond PHP, I build TypeScript tools with Bun and apps on Cloudflare Workers, and I treat Claude Code and LLMs like colleagues who need clear rules. With them I refresh my own projects and those of friends. I've been contributing to OpenStreetMap since 2021.
+
 ## Popular projects
 
 - <a href="https://github.com/gander-mcp/osm-tagging-schema-mcp" target="_blank" rel="noopener" data-m:click="action=repo;project=osm-tagging-schema-mcp">osm-tagging-schema-mcp</a>: `MCP` server providing **OpenStreetMap** tagging schema tools for `AI` assistants: validate tags, query values, search presets, and suggest improvements.
