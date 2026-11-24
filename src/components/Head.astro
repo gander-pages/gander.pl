@@ -1,0 +1,9 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+
+// Untranslated pages under a locale (e.g. /pl/...) are English fallback copies: keep them out of search results.
+const { isFallback } = Astro.locals.starlightRoute;
+---
+
+<Default />
+{isFallback && <meta name="robots" content="noindex, follow" />}

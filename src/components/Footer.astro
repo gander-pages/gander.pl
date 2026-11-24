@@ -4,11 +4,8 @@ import Default from '@astrojs/starlight/components/Footer.astro';
 
 <Default />
 
-<aside class="cookie-notice" aria-label="Cookie notice">
-	<p>
-		This site stores only its own settings (like the theme) in your browser, never for profiling. A proper GDPR
-		consent popup is in preparation.
-	</p>
+<aside class="cookie-notice" aria-label={Astro.locals.t('cookieNotice.label')}>
+	<p>{Astro.locals.t('cookieNotice.text')}</p>
 </aside>
 
 <style>
