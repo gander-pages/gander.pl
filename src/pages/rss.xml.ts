@@ -38,6 +38,8 @@ export async function GET(context: APIContext) {
         description: 'Code solutions, tips and tricks.',
         site: context.site!,
         trailingSlash: false,
+        xmlns: { atom: 'http://www.w3.org/2005/Atom' },
+        customData: `<atom:link href="${new URL('rss.xml', context.site)}" rel="self" type="application/rss+xml"/>`,
         items: articles.map(({ entry: { id, data }, pubDate }) => ({
             title: data.title,
             description: data.description,
