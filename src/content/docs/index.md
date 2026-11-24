@@ -12,7 +12,7 @@ Solutions to problems I've run into at work and in hobby projects: Symfony, Pimc
 
 ## 👋 About me
 
-I'm a **PHP developer** with over twenty years of experience, online since 2005 as **gander**. What began as a hobby in the PHP-Fusion community grew into websites, online shops, integrations and data import systems, built mostly with <a href="https://symfony.com/" target="_blank" rel="noopener">Symfony</a>, <a href="https://getlaminas.org/" target="_blank" rel="noopener">Zend</a> and CMS/CMF platforms.
+I'm a **PHP developer** with over twenty years of experience, online since 2005 as **gander**. What began as a hobby in the PHP-Fusion community grew into websites, online shops, integrations and data import systems, built mostly with <a href="https://symfony.com/" target="_blank" rel="noopener">Symfony</a> and <a href="https://getlaminas.org/" target="_blank" rel="noopener">Zend</a>.
 
 🤝 I care about **peer code review**, **automated quality checks in CI/CD**, **dependency security** and a Docker setup that gets a new person running quickly. I'd rather fix legacy code than abandon it.
 
