@@ -69,6 +69,10 @@ export default defineConfig({
           ],
         },
         {
+          label: 'Articles',
+          items: [{ label: 'Hype Driven Development', link: '/articles/hype-driven-development' }],
+        },
+        {
           label: 'Services',
           items: [{ label: 'IFTTT: Maker Webhooks', link: '/solutions/services/ifttt-maker-webhooks' }],
         },
