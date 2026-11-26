@@ -1,8 +1,27 @@
 ---
+import { Image } from 'astro:assets';
 import Default from '@astrojs/starlight/components/Footer.astro';
+import blueskyQr from '../assets/bluesky-qr.png';
 ---
 
 <Default />
+
+<a
+	class="bluesky-qr"
+	href="https://bsky.app/profile/gander.pl"
+	target="_blank"
+	rel="me noopener"
+	data-m:click="action=social;target=bluesky-qr"
+>
+	<Image
+		src={blueskyQr}
+		width={160}
+		densities={[1, 2]}
+		alt="QR code linking to the @gander.pl profile on Bluesky"
+		loading="lazy"
+	/>
+	<span>Follow @gander.pl on Bluesky</span>
+</a>
 
 <aside class="cookie-notice" aria-label="Cookie notice">
 	<p>
@@ -60,7 +79,29 @@ import Default from '@astrojs/starlight/components/Footer.astro';
 			}
 		}
 
-		.cookie-notice p {
+		.bluesky-qr {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+			inline-size: fit-content;
+			margin: 2.5rem auto 0;
+			color: var(--sl-color-gray-2);
+			font-size: var(--sl-text-sm);
+			text-decoration: none;
+		}
+
+		.bluesky-qr:hover,
+		.bluesky-qr:focus-visible {
+			color: var(--sl-color-white);
+		}
+
+		.bluesky-qr img {
+			display: block;
+			block-size: auto;
+		}
+
+				.cookie-notice p {
 			margin: 0;
 		}
 	}
