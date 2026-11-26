@@ -4,7 +4,7 @@ import type { APIContext } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 // Only the maintained article sections go into the feed; legacy root pages are under content review.
-const ARTICLE_SECTIONS = ['solutions/', 'tools/'];
+const ARTICLE_SECTIONS = ['articles/', 'solutions/', 'tools/'];
 
 /**
  * Publication date = author date of the commit that added the file (following renames).
