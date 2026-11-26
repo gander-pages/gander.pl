@@ -37,6 +37,7 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/gander' },
         { icon: 'stackOverflow', label: 'Stack Overflow', href: 'https://stackoverflow.com/users/4559414/gander' },
         { icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/adam-gasowski/' },
+        { icon: 'blueSky', label: 'Bluesky', href: 'https://bsky.app/profile/gander.pl' },
         { icon: 'rss', label: 'RSS feed', href: '/rss.xml' },
       ],
       head,
