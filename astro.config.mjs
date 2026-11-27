@@ -70,7 +70,10 @@ export default defineConfig({
         },
         {
           label: 'Articles',
-          items: [{ label: 'Hype Driven Development', link: '/articles/hype-driven-development' }],
+          items: [
+            { label: 'Hype Driven Development', link: '/articles/hype-driven-development' },
+            { label: '/.well-known/ in practice', link: '/articles/well-known-uris' },
+          ],
         },
         {
           label: 'Services',
