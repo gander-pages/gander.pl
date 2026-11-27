@@ -1,14 +1,29 @@
 ---
-lastUpdated: 2026-11-27T11:00:00+01:00
+lastUpdated: 2026-11-27T11:15:00+01:00
 title: /.well-known/ in practice
-description: What the /.well-known/ directory (RFC 8615) is, and five hand-picked paths, from acme-challenge to mercure.
+description: What the /.well-known/ directory (RFC 8615) is, and five hand-picked paths, from security.txt to mercure.
 topic: devops
 tags: [well-known, rfc 8615, security, tls, openid connect, webauthn, passkeys, mercure, symfony]
 ---
 
 The `/.well-known/` directory is a reserved place at the root of a domain where services publish files under **names agreed in advance**. This way a browser, a certificate authority, an OAuth client or a password manager knows where to look for information about a site, without any prior configuration. The rules are defined in [RFC 8615](https://www.rfc-editor.org/rfc/rfc8615), and IANA maintains the list of names.
 
-The registry has more than a hundred entries today, but most of them concern IoT, telecoms or niche protocols. Below are five that I picked as interesting, ordered from the most commonly used.
+The registry has more than a hundred entries today, but most of them concern IoT, telecoms or niche protocols. Below are five that I picked as interesting: `security.txt` first, then the rest ordered from the most commonly used.
+
+## security.txt
+
+A contact for people who have found a vulnerability ([RFC 9116](https://www.rfc-editor.org/rfc/rfc9116)). It is read by security researchers, bug bounty platforms and scanners. The `Contact` and `Expires` fields are required.
+
+```text
+Contact: mailto:security@example.com
+Expires: 2027-11-27T00:00:00.000Z
+Preferred-Languages: en, pl
+Policy: https://example.com/security-policy
+```
+
+Set a reminder before the `Expires` date, because scanners report an expired file as an error.
+
+Two handy tools: [securitytxt.org](https://securitytxt.org/) explains the format and generates the file, and [securitytxts.com](https://securitytxts.com/) validates it against RFC 9116, also through an API you can call from CI.
 
 ## acme-challenge
 
@@ -37,19 +52,6 @@ OpenID Connect provider metadata ([OIDC Discovery](https://openid.net/specs/open
 ```
 
 For plain OAuth 2.0, the equivalent is `oauth-authorization-server` ([RFC 8414](https://www.rfc-editor.org/rfc/rfc8414)).
-
-## security.txt
-
-A contact for people who have found a vulnerability ([RFC 9116](https://www.rfc-editor.org/rfc/rfc9116)). It is read by security researchers, bug bounty platforms and scanners. The `Contact` and `Expires` fields are required.
-
-```text
-Contact: mailto:security@example.com
-Expires: 2027-11-27T00:00:00.000Z
-Preferred-Languages: en, pl
-Policy: https://example.com/security-policy
-```
-
-Set a reminder before the `Expires` date, because scanners report an expired file as an error.
 
 ## webauthn
 
